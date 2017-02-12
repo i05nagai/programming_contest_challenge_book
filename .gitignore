@@ -1,0 +1,17 @@
+#cmake
+/CmakeCache.txt
+/CmakeFiles
+/Makefile
+/cmake_install.cmake
+/tags
+/CTestTestfile.cmake
+/Testing
+*.Po
+.dirstamp
+/GTAGS
+/GPATH
+/GRTAGS
+
+/*_test
+/lib*
+
