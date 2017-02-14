@@ -21,7 +21,7 @@ TEST(breadth_first_search, breadth_first_search1)
     const int startRow = 0;
     const int startCol = 1;
     const int goalRow = 9;
-    const int goalCol = 9;
+    const int goalCol = 8;
 
 	const int actual = breadth_first_search(
         maze, numRow, numCol, startRow, startCol, goalRow, goalCol);
