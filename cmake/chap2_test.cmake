@@ -7,6 +7,7 @@ LIST (APPEND chap2_test_SOURCES
     src/chap2/greedy_coin_test.cc
     src/chap2/greedy_scheduling_test.cc
     src/chap2/knapsack_test.cc
+    src/chap2/knapsack_with_duplication_test.cc
     src/chap2/lake_counting_test.cc
     src/chap2/longest_common_subsequence_test.cc
     src/chap2/main.cc
