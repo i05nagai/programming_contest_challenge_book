@@ -13,6 +13,7 @@ LIST (APPEND chap2_SOURCES
     src/chap2/longest_common_subsequence.cc
     src/chap2/partial_sum.cc
     src/chap2/saruman_army.cc
+    src/chap2/union_find_tree.cc
 )
 LIST (APPEND chap2_HEADERS
     src/chap2/binary_search_tree.h
@@ -29,4 +30,5 @@ LIST (APPEND chap2_HEADERS
     src/chap2/longest_common_subsequence.h
     src/chap2/partial_sum.h
     src/chap2/saruman_army.h
+    src/chap2/union_find_tree.h
 )
