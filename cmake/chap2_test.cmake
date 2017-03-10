@@ -1,5 +1,6 @@
 LIST (APPEND chap2_test_SOURCES
     src/chap2/binary_search_tree_test.cc
+    src/chap2/bipartite_graph_test.cc
     src/chap2/breadth_first_search_test.cc
     src/chap2/depth_first_search_test.cc
     src/chap2/factorial_test.cc
