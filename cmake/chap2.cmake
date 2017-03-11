@@ -1,4 +1,5 @@
 LIST (APPEND chap2_SOURCES
+    src/chap2/bellman_ford.cc
     src/chap2/binary_search_tree.cc
     src/chap2/bipartite_graph.cc
     src/chap2/breadth_first_search.cc
@@ -17,6 +18,7 @@ LIST (APPEND chap2_SOURCES
     src/chap2/union_find_tree.cc
 )
 LIST (APPEND chap2_HEADERS
+    src/chap2/bellman_ford.h
     src/chap2/binary_search_tree.h
     src/chap2/bipartite_graph.h
     src/chap2/breadth_first_search.h
