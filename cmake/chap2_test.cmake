@@ -4,6 +4,7 @@ LIST (APPEND chap2_test_SOURCES
     src/chap2/bipartite_graph_test.cc
     src/chap2/breadth_first_search_test.cc
     src/chap2/depth_first_search_test.cc
+    src/chap2/dijkstra_test.cc
     src/chap2/factorial_test.cc
     src/chap2/fence_repair_test.cc
     src/chap2/greedy_best_cow_line_test.cc
