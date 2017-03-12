@@ -18,4 +18,5 @@ LIST (APPEND chap2_test_SOURCES
     src/chap2/partial_sum_test.cc
     src/chap2/saruman_army_test.cc
     src/chap2/union_find_tree_test.cc
+    src/chap2/warshall_floyd_test.cc
 )

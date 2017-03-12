@@ -17,6 +17,7 @@ LIST (APPEND chap2_SOURCES
     src/chap2/partial_sum.cc
     src/chap2/saruman_army.cc
     src/chap2/union_find_tree.cc
+    src/chap2/warshall_floyd.cc
 )
 LIST (APPEND chap2_HEADERS
     src/chap2/bellman_ford.h
@@ -37,4 +38,5 @@ LIST (APPEND chap2_HEADERS
     src/chap2/partial_sum.h
     src/chap2/saruman_army.h
     src/chap2/union_find_tree.h
+    src/chap2/warshall_floyd.h
 )
