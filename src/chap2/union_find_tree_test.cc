@@ -6,7 +6,7 @@ TEST(union_find_tree, simple)
     constexpr int numElement = 7;
     int rootNode[numElement];
     int height[numElement];
-    init(rootNode, height, numElement);
+    init_union_find(rootNode, height, numElement);
 
     unite_group(rootNode, height, 1, 2);
     unite_group(rootNode, height, 1, 5);

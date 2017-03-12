@@ -1,7 +1,7 @@
 #include "chap2/union_find_tree.h"
 #include <cassert>
 
-void init(int rootNode[], int height[], const int numElement) {
+void init_union_find(int rootNode[], int height[], const int numElement) {
     for (int elemIndex = 0; elemIndex < numElement; ++elemIndex) {
         rootNode[elemIndex] = elemIndex;
         height[elemIndex] = 0;
@@ -57,7 +57,7 @@ int food_chain(
     const int numElement = numAnimals * 3;
     int rootNode[numElement];
     int height[numElement];
-    init(rootNode, height, numElement);
+    init_union_find(rootNode, height, numElement);
 
     int countInvalidInfo = 0;
     for (size_t info = 0; info < numInfo; ++info) {

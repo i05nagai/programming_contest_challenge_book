@@ -8,7 +8,7 @@
  * @param height[]
  * @param numElement
  */
-void init(int rootNode[], int height[], const int numElement);
+void init_union_find(int rootNode[], int height[], const int numElement);
 /**
  * @brief  
  *
