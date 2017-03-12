@@ -124,3 +124,52 @@ TEST(dijkstra_fast, simple)
     EXPECT_EQ(dist[6], 16);
 }
 
+TEST(dijkstra, with_path)
+{
+    constexpr int numVertex = 7;
+    std::vector<std::vector<int>> cost(7);
+    for (std::size_t i = 0; i < numVertex; ++i) {
+        cost[i].resize(7);
+    }
+    
+    const int start = 0;
+    const int end = 6;
+    cost[0][1] = 2;
+    cost[0][2] = 5;
+    cost[1][0] = 2;
+    cost[1][2] = 4;
+    cost[1][3] = 6;
+    cost[1][4] = 10;
+    cost[2][0] = 5;
+    cost[2][1] = 4;
+    cost[2][3] = 2;
+    cost[3][1] = 6;
+    cost[3][2] = 2;
+    cost[3][5] = 1;
+    cost[4][1] = 10;
+    cost[4][5] = 3;
+    cost[4][6] = 5;
+    cost[5][3] = 1;
+    cost[5][4] = 3;
+    cost[5][6] = 9;
+    cost[6][4] = 5;
+    cost[6][5] = 9;
+    for (std::size_t i = 0; i < numVertex; ++i) {
+        for (std::size_t j = 0; j < numVertex; ++j) {
+            if (cost[i][j] == 0) {
+                cost[i][j] = DIJKSTRA_INF;
+            }
+        }
+    }
+
+    int dist[numVertex];
+    const std::vector<int> path = get_shortest_path(
+        dist, cost, numVertex, start, end);
+
+    EXPECT_EQ(path[0], 0);
+    EXPECT_EQ(path[1], 2);
+    EXPECT_EQ(path[2], 3);
+    EXPECT_EQ(path[3], 5);
+    EXPECT_EQ(path[4], 4);
+    EXPECT_EQ(path[5], 6);
+}

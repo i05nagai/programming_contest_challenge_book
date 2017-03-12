@@ -74,3 +74,64 @@ void dijkstra_fast(
         }
     }
 }
+
+void dijkstra_with_path(
+    int dist[],
+    const std::vector<std::vector<int>>& cost,
+    const int numVertex,
+    const int start,
+    int previousVertex[])
+{
+    bool determined[numVertex];
+    std::fill(determined, determined + numVertex, false);
+    std::fill(dist, dist + numVertex, DIJKSTRA_INF);
+    dist[start] = 0;
+
+    while(true) {
+        // find minimum distance in not determined vertices
+        // v = argmin dist[v]
+        int minVertex = -1;
+        for (int v = 0; v < numVertex; ++v) {
+            if (!determined[v] 
+                && (minVertex == -1 ||  dist[minVertex] > dist[v])) {
+                minVertex = v;
+            }
+        }
+        // all vertex are determined 
+        if (minVertex == -1) {
+            break;
+        }
+
+        // update neighbor of minVertex
+        for (int neighbor = 0; neighbor < numVertex; ++neighbor) {
+            if (dist[neighbor] > dist[minVertex] + cost[minVertex][neighbor]) {
+                dist[neighbor] = dist[minVertex] + cost[minVertex][neighbor];
+                previousVertex[neighbor] = minVertex;
+            }
+        }
+        // vertex that has minimum distance is never updated.
+        determined[minVertex] = true;
+    }
+}
+
+std::vector<int> get_shortest_path(
+    int dist[],
+    const std::vector<std::vector<int>>& cost,
+    const int numVertex,
+    const int start,
+    const int end)
+{
+    std::vector<int> path;
+    // previousVertex[v] denotes from previousVertex[v] to v
+    // previous path from start to end
+    int previousVertex[numVertex];
+    std::fill(previousVertex, previousVertex + numVertex, -1);
+    dijkstra_with_path(dist ,cost, numVertex, start, previousVertex);
+
+    for (int v = end; v != -1; v = previousVertex[v]) {
+        path.push_back(v);
+    }
+    std::reverse(path.begin(), path.end());
+    return path;
+}
+
