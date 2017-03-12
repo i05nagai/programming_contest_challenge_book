@@ -135,3 +135,59 @@ std::vector<int> get_shortest_path(
     return path;
 }
 
+void dijkstra_fast_with_path(
+    int dist[],
+    std::vector<DijkstraEdge> cost[],
+    const int numVertex,
+    const int start,
+    int previousVertex[])
+{
+    // shortest distance and vertex number
+    typedef std::pair<int, int> Vertex;
+
+    std::priority_queue<Vertex, std::vector<Vertex>, std::greater<Vertex>> queue;
+    std::fill(dist, dist + numVertex, DIJKSTRA_INF);
+    dist[start] = 0;
+    queue.push(Vertex(0, start));
+
+    while(!queue.empty()) {
+        const Vertex vertex = queue.top();
+        queue.pop();
+        const int distance = vertex.first;
+        const int vertexNum = vertex.second;
+
+        // need not to update
+        if (dist[vertexNum] < distance) {
+            continue;
+        }
+        for (int e = 0; e < cost[vertexNum].size(); ++e) {
+            const DijkstraEdge edge = cost[vertexNum][e];
+            if (dist[edge.to] > dist[vertexNum] + edge.cost) {
+                dist[edge.to] = dist[vertexNum] + edge.cost;
+                queue.push(Vertex(dist[edge.to], edge.to));
+                previousVertex[edge.to] = vertexNum;
+            }
+        }
+    }
+}
+
+std::vector<int> get_shortest_path_fast(
+    int dist[],
+    std::vector<DijkstraEdge> cost[],
+    const int numVertex,
+    const int start,
+    const int end)
+{
+    std::vector<int> path;
+    // previousVertex[v] denotes from previousVertex[v] to v
+    // previous path from start to end
+    int previousVertex[numVertex];
+    std::fill(previousVertex, previousVertex + numVertex, -1);
+    dijkstra_fast_with_path(dist ,cost, numVertex, start, previousVertex);
+
+    for (int v = end; v != -1; v = previousVertex[v]) {
+        path.push_back(v);
+    }
+    std::reverse(path.begin(), path.end());
+    return path;
+}

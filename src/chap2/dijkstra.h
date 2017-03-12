@@ -67,4 +67,35 @@ std::vector<int> get_shortest_path(
     const int numVertex,
     const int start,
     const int end);
-
+/**
+ * @brief 
+ *
+ * @param dist[]
+ * @param cost[]
+ * @param numVertex
+ * @param start
+ * @param previousVertex[]
+ */
+void dijkstra_fast_with_path(
+    int dist[],
+    std::vector<DijkstraEdge> cost[],
+    const int numVertex,
+    const int start,
+    int previousVertex[]);
+/**
+ * @brief 
+ *
+ * @param dist[]
+ * @param cost
+ * @param numVertex
+ * @param start
+ * @param end
+ *
+ * @return 
+ */
+std::vector<int> get_shortest_path_fast(
+    int dist[],
+    std::vector<DijkstraEdge> cost[],
+    const int numVertex,
+    const int start,
+    const int end);
