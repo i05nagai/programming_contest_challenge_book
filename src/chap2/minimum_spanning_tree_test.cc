@@ -46,26 +46,26 @@ TEST(minimum_spanning_tree, prim)
 TEST(minimum_spanning_tree, kruskal)
 {
     const int numVertex = 7;
-    std::vector<Edge> cost(18);
+    std::vector<MinimumSpanningTreeEdge> cost(18);
 
-    Edge edge1(0, 1, 10);
-    Edge edge2(0, 2, 2);
-    Edge edge3(1, 0, 10);
-    Edge edge4(1, 3, 5);
-    Edge edge5(2, 0, 2);
-    Edge edge6(2, 3, 7);
-    Edge edge7(2, 4, 3);
-    Edge edge8(2, 6, 1);
-    Edge edge9(3, 1, 5);
-    Edge edge10(3, 2, 7);
-    Edge edge11(3, 4, 1);
-    Edge edge12(3, 5, 8);
-    Edge edge13(4, 2, 3);
-    Edge edge14(4, 3, 1);
-    Edge edge15(4, 5, 5);
-    Edge edge16(5, 3, 8);
-    Edge edge17(5, 4, 5);
-    Edge edge18(6, 2, 1);
+    MinimumSpanningTreeEdge edge1(0, 1, 10);
+    MinimumSpanningTreeEdge edge2(0, 2, 2);
+    MinimumSpanningTreeEdge edge3(1, 0, 10);
+    MinimumSpanningTreeEdge edge4(1, 3, 5);
+    MinimumSpanningTreeEdge edge5(2, 0, 2);
+    MinimumSpanningTreeEdge edge6(2, 3, 7);
+    MinimumSpanningTreeEdge edge7(2, 4, 3);
+    MinimumSpanningTreeEdge edge8(2, 6, 1);
+    MinimumSpanningTreeEdge edge9(3, 1, 5);
+    MinimumSpanningTreeEdge edge10(3, 2, 7);
+    MinimumSpanningTreeEdge edge11(3, 4, 1);
+    MinimumSpanningTreeEdge edge12(3, 5, 8);
+    MinimumSpanningTreeEdge edge13(4, 2, 3);
+    MinimumSpanningTreeEdge edge14(4, 3, 1);
+    MinimumSpanningTreeEdge edge15(4, 5, 5);
+    MinimumSpanningTreeEdge edge16(5, 3, 8);
+    MinimumSpanningTreeEdge edge17(5, 4, 5);
+    MinimumSpanningTreeEdge edge18(6, 2, 1);
     cost.push_back(edge1);
     cost.push_back(edge2);
     cost.push_back(edge3);

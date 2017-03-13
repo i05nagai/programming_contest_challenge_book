@@ -43,10 +43,13 @@ int prim(
 }
 
 int kruskal(
-    std::vector<Edge>& cost, const int numVertex) 
+    std::vector<MinimumSpanningTreeEdge>& cost, const int numVertex) 
 {
-    std::sort(cost.begin(), cost.end(), [](const Edge& e1, const Edge& e2) {
-              return e1.cost < e2.cost;
+    std::sort(cost.begin(),
+              cost.end(),
+              [](const MinimumSpanningTreeEdge& e1,
+                 const MinimumSpanningTreeEdge& e2) {
+                  return e1.cost < e2.cost;
               });
     int rootNode[numVertex];
     int height[numVertex];
@@ -55,7 +58,7 @@ int kruskal(
     int totalCost = 0;
 
     for (int e = 0; e < cost.size(); ++e) {
-        const Edge& edge = cost[e];
+        const MinimumSpanningTreeEdge& edge = cost[e];
         // if from and to are same component, adding edge makes cycle
         if (!is_same_group(rootNode, height, edge.from, edge.to)) {
             // edge.from and edge.to are same component

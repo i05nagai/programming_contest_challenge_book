@@ -3,6 +3,7 @@ LIST (APPEND chap2_SOURCES
     src/chap2/binary_search_tree.cc
     src/chap2/bipartite_graph.cc
     src/chap2/breadth_first_search.cc
+    src/chap2/conscription.cc
     src/chap2/depth_first_search.cc
     src/chap2/dijkstra.cc
     src/chap2/factorial.cc
@@ -26,6 +27,7 @@ LIST (APPEND chap2_HEADERS
     src/chap2/binary_search_tree.h
     src/chap2/bipartite_graph.h
     src/chap2/breadth_first_search.h
+    src/chap2/conscription.h
     src/chap2/depth_first_search.h
     src/chap2/dijkstra.h
     src/chap2/factorial.h

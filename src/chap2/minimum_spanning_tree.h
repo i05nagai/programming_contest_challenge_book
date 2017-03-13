@@ -3,14 +3,14 @@
 
 constexpr int MINIMUM_SPANNING_TREE_INF = 1000000;
 
-struct Edge {
-    explicit Edge()
+struct MinimumSpanningTreeEdge {
+    explicit MinimumSpanningTreeEdge()
     : from(0),
         to(0),
         cost(0)
     {
     }
-    Edge(const int from0, const int to0, const int cost0)
+    MinimumSpanningTreeEdge(const int from0, const int to0, const int cost0)
     : from(from0),
         to(to0),
         cost(cost0)
@@ -44,4 +44,4 @@ int prim(
  * @return total cost of minimum spanning tree.
  */
 int kruskal(
-    std::vector<Edge>& cost, const int numVertex);
+    std::vector<MinimumSpanningTreeEdge>& cost, const int numVertex);
