@@ -17,6 +17,7 @@ LIST (APPEND chap2_SOURCES
     src/chap2/longest_common_subsequence.cc
     src/chap2/minimum_spanning_tree.cc
     src/chap2/partial_sum.cc
+    src/chap2/prime_number.cc
     src/chap2/roadblocks.cc
     src/chap2/saruman_army.cc
     src/chap2/union_find_tree.cc
@@ -35,12 +36,14 @@ LIST (APPEND chap2_HEADERS
     src/chap2/greedy_best_cow_line.h
     src/chap2/greedy_coin.h
     src/chap2/greedy_scheduling.h
+    src/chap2/gtest_helper.h
     src/chap2/knapsack.h
     src/chap2/knapsack_with_duplication.h
     src/chap2/lake_counting.h
     src/chap2/longest_common_subsequence.h
     src/chap2/minimum_spanning_tree.h
     src/chap2/partial_sum.h
+    src/chap2/prime_number.h
     src/chap2/roadblocks.h
     src/chap2/saruman_army.h
     src/chap2/union_find_tree.h
