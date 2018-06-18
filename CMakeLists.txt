@@ -37,9 +37,12 @@ include_directories(
 #inclue sources
 include(cmake/chap2.cmake)
 include(cmake/chap2_test.cmake)
+include(cmake/chap3.cmake)
+include(cmake/chap3_test.cmake)
 
 #add library
 add_library(chap2 ${chap2_SOURCES})
+add_library(chap3 ${chap3_SOURCES})
 
 # test
 enable_testing()
@@ -50,4 +53,8 @@ target_link_libraries(chap2_test gmock)
 target_link_libraries(chap2_test gtest)
 add_test(chap2_test chap2_test)
 
-
+add_executable(chap3_test ${chap3_test_SOURCES})
+target_link_libraries(chap3_test chap3)
+target_link_libraries(chap3_test gmock)
+target_link_libraries(chap3_test gtest)
+add_test(chap3_test chap3_test)
