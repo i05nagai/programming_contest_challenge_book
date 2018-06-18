@@ -17,6 +17,7 @@ LIST (APPEND chap2_test_SOURCES
     src/chap2/knapsack_with_duplication_test.cc
     src/chap2/lake_counting_test.cc
     src/chap2/longest_common_subsequence_test.cc
+    src/chap2/longest_increasing_subsequence/longest_increasing_subsequence_test.cc
     src/chap2/main.cc
     src/chap2/minimum_scalar_product_test.cc
     src/chap2/minimum_spanning_tree_test.cc
