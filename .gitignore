@@ -1,17 +1,27 @@
 #cmake
-/CmakeCache.txt
-/CmakeFiles
-/Makefile
-/cmake_install.cmake
-/tags
-/CTestTestfile.cmake
-/Testing
 *.Po
+*.dSYM
 .dirstamp
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+CTestTestfile.cmake
+Makefile
+Testing
+cmake_install.cmake
+compile_commands.json
+install_manifest.txt
+
+# gtags
 /GTAGS
 /GPATH
 /GRTAGS
+/tags
 
 /*_test
 /lib*
 
+# gdb
+.gdb_history
+
+# repositroy specific
