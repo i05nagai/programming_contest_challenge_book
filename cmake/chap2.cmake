@@ -13,6 +13,7 @@ LIST (APPEND chap2_SOURCES
     src/chap2/greedy_coin.cc
     src/chap2/greedy_scheduling.cc
     src/chap2/knapsack.cc
+    src/chap2/knapsack2.cc
     src/chap2/knapsack_with_duplication.cc
     src/chap2/lake_counting.cc
     src/chap2/longest_common_subsequence.cc
@@ -41,6 +42,7 @@ LIST (APPEND chap2_HEADERS
     src/chap2/greedy_scheduling.h
     src/chap2/gtest_helper.h
     src/chap2/knapsack.h
+    src/chap2/knapsack2.h
     src/chap2/knapsack_with_duplication.h
     src/chap2/lake_counting.h
     src/chap2/longest_common_subsequence.h
