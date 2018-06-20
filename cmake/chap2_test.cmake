@@ -21,6 +21,7 @@ LIST (APPEND chap2_test_SOURCES
     src/chap2/main.cc
     src/chap2/minimum_scalar_product_test.cc
     src/chap2/minimum_spanning_tree_test.cc
+    src/chap2/number_of_partitioning_pattern/number_of_partitioning_pattern_test.cc
     src/chap2/partial_sum_test.cc
     src/chap2/prime_number_test.cc
     src/chap2/roadblocks_test.cc

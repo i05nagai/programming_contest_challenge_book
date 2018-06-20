@@ -20,6 +20,7 @@ LIST (APPEND chap2_SOURCES
     src/chap2/longest_increasing_subsequence/longest_increasing_subsequence.cc
     src/chap2/minimum_scalar_product.cc
     src/chap2/minimum_spanning_tree.cc
+    src/chap2/number_of_partitioning_pattern/number_of_partitioning_pattern.cc
     src/chap2/partial_sum.cc
     src/chap2/prime_number.cc
     src/chap2/roadblocks.cc
@@ -50,6 +51,7 @@ LIST (APPEND chap2_HEADERS
     src/chap2/longest_increasing_subsequence/longest_increasing_subsequence.h
     src/chap2/minimum_scalar_product.h
     src/chap2/minimum_spanning_tree.h
+    src/chap2/number_of_partitioning_pattern/number_of_partitioning_pattern.h
     src/chap2/partial_sum.h
     src/chap2/prime_number.h
     src/chap2/roadblocks.h
