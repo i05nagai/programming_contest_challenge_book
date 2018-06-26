@@ -1,5 +1,5 @@
-#include "chap2/conscription.h"
-#include "chap2/minimum_spanning_tree.h"
+#include "chap2/minimum_spanning_tree/conscription.h"
+#include "chap2/minimum_spanning_tree/minimum_spanning_tree.h"
 
 int conscription(
     const std::vector<ConscriptionRelation>& relations,

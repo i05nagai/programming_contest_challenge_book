@@ -12,5 +12,8 @@ The algorithms construct the minimum spanning three.
 ## Roadblocks
 POJ No 3255.  pp 102.
 
+## Conscription
+POJ No 3723.  pp 103.
+
 ## Referenc
 * pp100

@@ -3,7 +3,6 @@ LIST (APPEND chap2_test_SOURCES
     src/chap2/binary_search_tree_test.cc
     src/chap2/bipartite_graph_test.cc
     src/chap2/breadth_first_search_test.cc
-    src/chap2/conscription_test.cc
     src/chap2/crazy_rows_test.cc
     src/chap2/depth_first_search_test.cc
     src/chap2/dijkstra_test.cc
@@ -20,8 +19,9 @@ LIST (APPEND chap2_test_SOURCES
     src/chap2/longest_increasing_subsequence/longest_increasing_subsequence_test.cc
     src/chap2/main.cc
     src/chap2/minimum_scalar_product_test.cc
+    src/chap2/minimum_spanning_tree/conscription_test.cc
+    src/chap2/minimum_spanning_tree/minimum_spanning_tree_test.cc
     src/chap2/minimum_spanning_tree/roadblocks_test.cc
-    src/chap2/minimum_spanning_tree_test.cc
     src/chap2/number_of_combination/number_of_combination_test.cc
     src/chap2/number_of_partitioning_pattern/number_of_partitioning_pattern_test.cc
     src/chap2/partial_sum_test.cc

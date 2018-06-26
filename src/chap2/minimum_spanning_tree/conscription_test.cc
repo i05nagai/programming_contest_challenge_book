@@ -1,4 +1,4 @@
-#include "chap2/conscription.h"
+#include "chap2/minimum_spanning_tree/conscription.h"
 #include <gtest/gtest.h>
 
 TEST(conscription, simple)

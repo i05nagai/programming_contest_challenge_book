@@ -1,4 +1,4 @@
-#include "chap2/minimum_spanning_tree.h"
+#include "chap2/minimum_spanning_tree/minimum_spanning_tree.h"
 #include <gtest/gtest.h>
 
 // test comes from p99
