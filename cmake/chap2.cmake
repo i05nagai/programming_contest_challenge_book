@@ -3,6 +3,7 @@ LIST (APPEND chap2_SOURCES
     src/chap2/binary_search_tree.cc
     src/chap2/bipartite_graph.cc
     src/chap2/breadth_first_search.cc
+    src/chap2/gcj/bribe_the_prisoners.cc
     src/chap2/crazy_rows.cc
     src/chap2/depth_first_search.cc
     src/chap2/dijkstra.cc
@@ -34,6 +35,7 @@ LIST (APPEND chap2_HEADERS
     src/chap2/binary_search_tree.h
     src/chap2/bipartite_graph.h
     src/chap2/breadth_first_search.h
+    src/chap2/gcj/bribe_the_prisoners.h
     src/chap2/crazy_rows.h
     src/chap2/depth_first_search.h
     src/chap2/dijkstra.h
