@@ -24,3 +24,10 @@ Constraints
 ## Reference
 * pp129
 * POJ No. 1064
+
+## Aggressive cows
+
+## Reference
+* pp 131
+* POJ No.2456
+* [2456 -- Aggressive cows](http://poj.org/problem?id=2456)
