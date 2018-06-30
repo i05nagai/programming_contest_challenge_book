@@ -18,3 +18,9 @@ Constraints
 ## Reference
 * pp128
 * [Showing Binary Search correct using induction](http://www.cs.cornell.edu/courses/cs211/2006sp/Lectures/L06-Induction/binary_search.html)
+
+## Cable master
+
+## Reference
+* pp129
+* POJ No. 1064
