@@ -15,3 +15,11 @@
 ### Referene
 * pp 137
 * [3320 -- Jessica's Reading Problem](http://poj.org/problem?id=3320)
+
+### Face The Right way
+
+* $1 \le K \le N$,
+
+### Referene
+* pp 139
+* [3276 -- Face The Right Way](http://poj.org/problem?id=3276)
