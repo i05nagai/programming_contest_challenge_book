@@ -23,3 +23,11 @@
 ### Referene
 * pp 139
 * [3276 -- Face The Right Way](http://poj.org/problem?id=3276)
+
+### Fiptile
+
+* $1 \le M, N \le 15$,
+
+### Referene
+* pp 141
+* [3279 -- Fliptile](http://poj.org/problem?id=3279)
