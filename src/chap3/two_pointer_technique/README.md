@@ -62,3 +62,8 @@ $$
 * pp 145
 * [3684 -- Physics Experiment](http://poj.org/problem?id=3684)
 * [Equations of motion - Wikipedia](https://en.wikipedia.org/wiki/Equations_of_motion#Newtonian_mechanics)
+
+### 4 Values whose Sum is 0
+
+### Reference
+* [2785 -- 4 Values whose Sum is 0](http://poj.org/problem?id=2785)
