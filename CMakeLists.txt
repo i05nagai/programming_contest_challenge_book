@@ -39,12 +39,17 @@ include(cmake/chap2.cmake)
 include(cmake/chap2_test.cmake)
 include(cmake/chap3.cmake)
 include(cmake/chap3_test.cmake)
+include(cmake/algorithm.cmake)
+include(cmake/algorithm_test.cmake)
 
 #add library
 add_library(chap2 ${chap2_SOURCES})
 add_library(chap3 ${chap3_SOURCES})
+add_library(algorithm ${algorithm_SOURCES})
 
+#
 # test
+#
 enable_testing()
 
 add_executable(chap2_test ${chap2_test_SOURCES})
@@ -58,3 +63,9 @@ target_link_libraries(chap3_test chap3)
 target_link_libraries(chap3_test gmock)
 target_link_libraries(chap3_test gtest)
 add_test(chap3_test chap3_test)
+
+add_executable(algorithm_test ${algorithm_test_SOURCES})
+target_link_libraries(algorithm_test algorithm)
+target_link_libraries(algorithm_test gmock)
+target_link_libraries(algorithm_test gtest)
+add_test(algorithm_test algorithm_test)
