@@ -1,4 +1,4 @@
-#include "chap3/range_minimum_query.h"
+#include "algorithm/segment_tree/range_minimum_query.h"
 #include <vector>
 #include <gtest/gtest.h>
 
