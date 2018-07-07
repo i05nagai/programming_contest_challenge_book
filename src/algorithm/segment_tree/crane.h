@@ -2,10 +2,10 @@
 #include <vector>
 
 namespace pccb {
-std::vector<std::pair<double, double>> crane(
+std::vector<std::pair<double, double>> SolveCrane(
     const int numCranes,
     const int numCommands,
     const int craneLengths[],
     const int points[],
-    const double angles[]);
+    const int angles[]);
 } // namespace pccb
