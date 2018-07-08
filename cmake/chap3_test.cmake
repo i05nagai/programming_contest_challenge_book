@@ -1,5 +1,4 @@
 LIST (APPEND chap3_test_SOURCES
-    src/chap3/binary_index_tree_test.cc
     src/chap3/binary_search/aggressive_cows_test.cc
     src/chap3/binary_search/cable_master_test.cc
     src/chap3/binary_search/lower_bound_test.cc

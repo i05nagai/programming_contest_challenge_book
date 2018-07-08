@@ -1,5 +1,4 @@
 LIST (APPEND chap3_SOURCES
-    src/chap3/binary_index_tree.cc
     src/chap3/binary_search/aggressive_cows.cc
     src/chap3/binary_search/cable_master.cc
     src/chap3/binary_search/lower_bound.cc
@@ -12,7 +11,6 @@ LIST (APPEND chap3_SOURCES
     src/chap3/two_pointer_technique/subsequence.cc
 )
 LIST (APPEND chap3_HEADERS
-    src/chap3/binary_index_tree.h
     src/chap3/binary_search/aggressive_cows.h
     src/chap3/binary_search/cable_master.h
     src/chap3/binary_search/lower_bound.h
