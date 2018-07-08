@@ -30,6 +30,8 @@ void init_segment_tree(
     const int left,
     const int right)
 {
+  // initial coordinate of i-th segment is (0, craneLength[i])
+  // and angle is 0
   nodes[nodeIndex].x = 0.0;
   nodes[nodeIndex].angle = 0.0;
   if (right - left == 1) {
@@ -47,7 +49,9 @@ void init_segment_tree(
 }
 
 /**
- * @brief rotate point by angle
+ * @brief the order to change the angle
+ *    between the point-th and the point + 1-th segment to angle degrees
+ *    the angle is measured counterclockwise from the point-th to the point + 1-th segment.
  *
  * @param point
  * @param angle
@@ -65,7 +69,7 @@ void change_segment_tree(
 {
   if (point <= left) {
     return;
-    // s in [left, right)
+    // rotateid point in [left, right)
   } else if (point < right) {
     const int newLeft = leftNode(nodeIndex);
     const int newRight = rightNode(nodeIndex);
@@ -77,6 +81,7 @@ void change_segment_tree(
     if (point <= mid) {
       nodes[nodeIndex].angle += angle;
     }
+    // multiply rotation matrix
     const double sin = std::sin(nodes[nodeIndex].angle);
     const double cos = std::cos(nodes[nodeIndex].angle);
     nodes[nodeIndex].x = nodes[newLeft].x + (cos * nodes[newRight].x - sin * nodes[newRight].y);
@@ -91,11 +96,13 @@ std::vector<std::pair<double, double>> SolveCrane(
     const int points[],
     const int angles[])
 {
+  // nodes[i]: 
   Node nodes[(2 << 15) - 1];
   double originalAngles[numCranes];
   init_segment_tree(craneLengths, nodes, 0, 0, numCranes);
 
   for (int i = 1; i < numCranes; ++i) {
+    // 180 degree
     originalAngles[i] = M_PI;
   }
 
