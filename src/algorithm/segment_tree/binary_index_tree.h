@@ -1,5 +1,6 @@
 #pragma once
 
+namespace pccb {
 /**
  * @brief 
  *
@@ -8,4 +9,5 @@
  *
  * @return num of swaps when do bubble sort
  */
-long long int count_bubble_sort(int data[], const int size);
+long long int SolveCountBubbleSort(int data[], const int size);
+} // namespace pccb

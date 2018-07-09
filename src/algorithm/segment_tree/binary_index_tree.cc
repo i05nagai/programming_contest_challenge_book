@@ -1,7 +1,8 @@
-#include "chap3/binary_index_tree.h"
+#include "algorithm/segment_tree/binary_index_tree.h"
 #include <cstring>
 #include <iostream>
 
+namespace pccb {
 int sum_binary_index_tree(int tree[], int index)
 {
     int sum = 0;
@@ -43,7 +44,7 @@ void init_binary_index_tree(int tree[], int data[], const int size)
 
 // num of swap
 // data is permutation of sequence from 1 to n
-long long int count_bubble_sort(int data[], const int size)
+long long int SolveCountBubbleSort(int data[], const int size)
 {
     // num of swaps
     // tree[i] detenos num of swap between i and i + 1
@@ -59,3 +60,4 @@ long long int count_bubble_sort(int data[], const int size)
     }
     return numSwaps;
 }
+} // namespace pccb

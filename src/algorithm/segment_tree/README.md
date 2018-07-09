@@ -16,3 +16,8 @@
 ### Reference
 * [2991 -- Crane](http://poj.org/problem?id=2991)
 * p 156
+
+### Count Number of bubble sort
+
+### Reference
+* pp 162
