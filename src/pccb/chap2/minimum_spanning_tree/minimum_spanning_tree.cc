@@ -2,6 +2,7 @@
 #include "pccb/chap2/union_find_tree.h"
 #include <algorithm>
 
+namespace pccb {
 int prim(
     const std::vector<std::vector<int>>& cost, const int numVertex) 
 {
@@ -71,3 +72,4 @@ int kruskal(
     return totalCost;
 }
 
+} // namespace pccb

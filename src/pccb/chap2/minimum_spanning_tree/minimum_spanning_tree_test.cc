@@ -1,6 +1,7 @@
 #include "pccb/chap2/minimum_spanning_tree/minimum_spanning_tree.h"
 #include <gtest/gtest.h>
 
+namespace pccb {
 // test comes from p99
 TEST(minimum_spanning_tree, prim)
 {
@@ -88,3 +89,4 @@ TEST(minimum_spanning_tree, kruskal)
     const int totalCost = kruskal(cost, numVertex);
     EXPECT_EQ(17, totalCost);
 }
+} // namespace pccb

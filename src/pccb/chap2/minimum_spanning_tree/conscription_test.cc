@@ -1,6 +1,7 @@
 #include "pccb/chap2/minimum_spanning_tree/conscription.h"
 #include <gtest/gtest.h>
 
+namespace pccb {
 TEST(conscription, simple)
 {
     std::vector<ConscriptionRelation> relations;
@@ -17,3 +18,4 @@ TEST(conscription, simple)
     const int cost = conscription(relations, 5, 5);
     EXPECT_EQ(71071, cost);
 }
+} // namespace pccb

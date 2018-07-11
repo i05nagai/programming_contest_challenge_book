@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 
+namespace pccb {
 constexpr int MINIMUM_SPANNING_TREE_INF = 1000000;
 
 struct MinimumSpanningTreeEdge {
@@ -45,3 +46,4 @@ int prim(
  */
 int kruskal(
     std::vector<MinimumSpanningTreeEdge>& cost, const int numVertex);
+} // namespace pccb

@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 
+namespace pccb {
 struct ConscriptionRelation {
     explicit ConscriptionRelation()
     : male(0),
@@ -34,3 +35,4 @@ int conscription(
     const std::vector<ConscriptionRelation>& relations,
     const int numMale,
     const int numFemale);
+} // namespace pccb
