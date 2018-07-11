@@ -6,6 +6,8 @@ Sample code of Programming Contest Challenge Book.
 ## Build
 ```
 git clone https://github.com/i05nagai/programming_contest_challenge_book.git
+git submodule init
+git submodule update
 mkdir build
 cd build
 cmake ..
