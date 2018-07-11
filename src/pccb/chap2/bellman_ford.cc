@@ -1,5 +1,6 @@
 #include "pccb/chap2/bellman_ford.h"
 #include <algorithm>
+#include <cstring>
 
 void shortest_path(
     Edge edges[],
@@ -37,19 +38,19 @@ bool find_negative_loop(
     const int numVertex,
     const int numEdge) 
 {
-    memset(dist, 0, sizeof(dist));
-    
-    for (int i = 0; i < numVertex; ++i) {
-        for (int e = 0; e < numEdge; ++e ) {
-            const Edge edge = edges[e];
-            if (dist[edge.to] > dist[edge.from] + edge.cost) {
-                // update numVertex times that means there is negative loop.
-                if (i == numVertex - 1) {
-                    return true;
-                }
-            }
-        }
-    }
+  std::memset(dist, 0, sizeof(dist));
 
-    return false;
+  for (int i = 0; i < numVertex; ++i) {
+    for (int e = 0; e < numEdge; ++e ) {
+      const Edge edge = edges[e];
+      if (dist[edge.to] > dist[edge.from] + edge.cost) {
+        // update numVertex times that means there is negative loop.
+        if (i == numVertex - 1) {
+          return true;
+        }
+      }
+    }
+  }
+
+  return false;
 }

@@ -1,5 +1,6 @@
 #include "pccb/chap2/partial_sum.h"
 #include <algorithm>
+#include <cstring>
 #include <iterator>
 #include <iostream>
 
@@ -37,7 +38,7 @@ bool partial_sum_save_memory(
   // memoRest[itemIndex][value]
   // number of itemIndex-th item to achive value adding items from 1st to itemIndex th
   int memoRest[total + 1];
-  memset(memoRest, -1, sizeof(memoRest));
+  std::memset(memoRest, -1, sizeof(memoRest));
   memoRest[0] = 0;
 
   for (std::size_t itemIndex = 0; itemIndex < length; ++itemIndex) {

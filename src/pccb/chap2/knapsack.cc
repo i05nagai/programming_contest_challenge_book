@@ -1,5 +1,6 @@
 #include "pccb/chap2/knapsack.h"
 #include <algorithm>
+#include <cstring>
 #define MAX_NUM_ITEM 100
 
 int knapsack_simple(
@@ -78,7 +79,7 @@ int knapsack_memoization(
 {
     int memoValues[remainingWeight + 1][MAX_NUM_ITEM + 1];
     // set uncalculated flag
-    memset(memoValues, -1, sizeof(memoValues));
+    std::memset(memoValues, -1, sizeof(memoValues));
     return do_knapsack_memoization(
         numItem, weights, values, memoValues, posItem, remainingWeight);
 }
@@ -92,7 +93,7 @@ int knapsack_dynamic_programming(
 {
     int memoValues[remainingWeight + 1][MAX_NUM_ITEM + 1];
     // initliaze
-    memset(memoValues, 0, sizeof(memoValues));
+    std::memset(memoValues, 0, sizeof(memoValues));
     // maxWeigth
 
     for (int posItem = numItem - 1; posItem >= 0; --posItem) {

@@ -1,4 +1,5 @@
 #include "pccb/chap3/two_pointer_technique/physics_experiment.h"
+#include <algorithm>
 #include <cmath>
 
 namespace pccb {

@@ -3,14 +3,14 @@
 #include <iostream>
 
 namespace pccb {
-int sum_binary_index_tree(int tree[], int index)
+int SumBinaryIndexTree(int tree[], int index)
 {
-    int sum = 0;
-    while (index > 0) {
-        sum += tree[index];
-        index -= index & (-index);
-    }
-    return sum;
+  int sum = 0;
+  while (index > 0) {
+    sum += tree[index];
+    index -= index & (-index);
+  }
+  return sum;
 }
 /**
  * @brief 
@@ -20,13 +20,13 @@ int sum_binary_index_tree(int tree[], int index)
  * @param index
  * @param value
  */
-void add_binary_index_tree(
+void AddBinaryIndexTree(
     int tree[], const int size, int index, const int value)
 {
-    while (index <= size) {
-        tree[index] += value;
-        index += index & (-index);
-    }
+  while (index <= size) {
+    tree[index] += value;
+    index += index & (-index);
+  }
 }
 /**
  * @brief 
@@ -35,11 +35,11 @@ void add_binary_index_tree(
  * @param data[]
  * @param size
  */
-void init_binary_index_tree(int tree[], int data[], const int size)
+void InitBinaryIndexTree(int tree[], int data[], const int size)
 {
-    for (int i = 1; i <= size; ++i) {
-        tree[i] = data[i];
-    }
+  for (int i = 1; i <= size; ++i) {
+    tree[i] = data[i];
+  }
 }
 
 // num of swap
@@ -55,8 +55,8 @@ long long int SolveCountBubbleSort(int data[], const int size)
 
     long long int numSwaps = 0;
     for (int j = 0; j < size; ++j) {
-        numSwaps += j - sum_binary_index_tree(tree, data[j]);
-        add_binary_index_tree(tree, size, data[j], 1);
+        numSwaps += j - SumBinaryIndexTree(tree, data[j]);
+        AddBinaryIndexTree(tree, size, data[j], 1);
     }
     return numSwaps;
 }

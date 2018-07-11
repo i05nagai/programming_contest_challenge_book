@@ -1,7 +1,8 @@
 #include "pccb/chap3/coordinate_compress.h"
 #include <algorithm>
-#include <queue>
+#include <cstring>
 #include <iostream>
+#include <queue>
 
 namespace pccb {
 void coordinate_compress_draw_from_line(
@@ -97,7 +98,7 @@ int coordinate_compress(
 
     // fill the liens
     bool table[compressedNumRows][compressedNumCols];
-    memset(table, 0, sizeof(table));
+    std::memset(table, 0, sizeof(table));
     // drow compressed lattice
     for (int i = 0; i < numLines; ++i) {
       for (int row = startRows[i]; row <= endRows[i]; ++row) {

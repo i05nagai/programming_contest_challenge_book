@@ -1,5 +1,6 @@
 #pragma once
 
+namespace pccb {
 /**
  * @brief element is sequence of number from 0 to numElement-1
  *
@@ -56,3 +57,4 @@ bool is_same_group(
 int food_chain(
     const int types[], const int x[], const int y[], const int numInfo,
     const int numAnimals);
+} // namespace pccb

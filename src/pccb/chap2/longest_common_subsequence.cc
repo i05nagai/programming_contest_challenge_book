@@ -1,5 +1,6 @@
 #include "pccb/chap2/longest_common_subsequence.h"
 #include <algorithm>
+#include <cstring>
 
 int longest_common_subsequence_dynamic_programming(
     const int length1, const char str1[],
@@ -7,7 +8,7 @@ int longest_common_subsequence_dynamic_programming(
 {
   // length of longest common sequence at (pos1, pos2)
   int memo[length1 + 1][length2 + 1];
-  memset(memo, 0, sizeof(memo));
+  std::memset(memo, 0, sizeof(memo));
 
   for (int pos1 = 0; pos1 < length1; ++pos1) {
     for (int pos2 = 0; pos2 < length2; ++pos2) {

@@ -1,5 +1,6 @@
 #include "pccb/chap2/knapsack_with_duplication.h"
 #include <algorithm>
+#include <cstring>
 
 int knapsack_with_duplication(
     const int numItem,
@@ -12,7 +13,7 @@ int knapsack_with_duplication(
     // when knapsack has enough space 
     // to put in the items between 0th and i - 1 th
     int memoValues[numItem + 1][maxWeight + 1];
-    memset(memoValues, 0, sizeof(memoValues));
+    std::memset(memoValues, 0, sizeof(memoValues));
 
     for (int posItem = 0; posItem < numItem; ++posItem) {
        for (int weight = 0; weight <= maxWeight; ++weight) {
@@ -43,7 +44,7 @@ int knapsack_with_duplication_simple(
     // when knapsack has enough space 
     // to put in the items between 0th and i - 1 th
     int memoValues[numItem + 1][maxWeight + 1];
-    memset(memoValues, 0, sizeof(memoValues));
+    std::memset(memoValues, 0, sizeof(memoValues));
 
     for (int posItem = 0; posItem < numItem; ++posItem) {
        for (int weight = 0; weight <= maxWeight; ++weight) {
@@ -76,7 +77,7 @@ int knapsack_with_duplication_fast(
     // when knapsack has enough space 
     // to put in the items between 0th and i - 1 th
     int memoValues[numItem + 1][maxWeight + 1];
-    memset(memoValues, 0, sizeof(memoValues));
+    std::memset(memoValues, 0, sizeof(memoValues));
 
     for (int posItem = 0; posItem < numItem; ++posItem) {
        for (int weight = 0; weight <= maxWeight; ++weight) {
@@ -103,7 +104,7 @@ int knapsack_with_duplication_fast_reuse(
     const int maxWeight)
 {
     int memoValues[2][maxWeight + 1];
-    memset(memoValues, 0, sizeof(memoValues));
+    std::memset(memoValues, 0, sizeof(memoValues));
 
     for (int posItem = 0; posItem < numItem; ++posItem) {
        for (int weight = 0; weight <= maxWeight; ++weight) {
