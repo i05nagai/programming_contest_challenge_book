@@ -1,6 +1,7 @@
 #pragma once
 
 namespace pccb {
+  int range_minimum_query_get_size(const int num_data);
   /**
    * @brief 
    *
@@ -13,7 +14,7 @@ namespace pccb {
    * @return return new size of tree.
    *  size is adjusted to power of 2 for simplicity.
    */
-  int range_minimum_query_init(int tree[], const int size);
+  void range_minimum_query_init(int tree[], const int size);
 
   /**
    * @brief 
@@ -37,7 +38,5 @@ namespace pccb {
    */
   int range_minimum_query_query(
       int tree[],
-      const int size,
-      const int left,
-      const int right);
+      const int size);
 } // namespace pccb

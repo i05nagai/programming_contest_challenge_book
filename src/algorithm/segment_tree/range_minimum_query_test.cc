@@ -5,9 +5,6 @@
 namespace pccb {
 TEST(range_minimum_query, simple)
 {
-  const int size = 8;
-  int tree[size * 2];
-  const int new_size = range_minimum_query_init(tree, size);
   std::vector<int> data = {
     1,
     3,
@@ -18,14 +15,14 @@ TEST(range_minimum_query, simple)
     7,
     7,
   };
+  const int size = range_minimum_query_get_size(data.size());
+  int tree[2 * size - 1];
+  range_minimum_query_init(tree, size);
   for (int i = 0; i < data.size(); ++i) {
-    range_minimum_query_update(tree, new_size, i, data[i]);
+    range_minimum_query_update(tree, size, i, data[i]);
   }
 
-  const int left = 1;
-  const int right = 7;
-  const int actual = range_minimum_query_query(tree, new_size, left, right);
+  const int actual = range_minimum_query_query(tree, data.size());
   EXPECT_EQ(1, actual);
 }
-
 } // namespace pccb

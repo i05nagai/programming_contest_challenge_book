@@ -16,19 +16,22 @@ inline int nodeIndexToRightIndex(const int nodeIndex)
   return 2 * nodeIndex + 2;
 }
 
-int range_minimum_query_init(int tree[], const int size)
+// allocate tree[size * 2 - 1]
+int range_minimum_query_get_size(const int num_data)
 {
-    // find minimum value(num) achieving size < 2^{num}
-    int newSize = 1;
-    while (newSize < size) {
-        newSize *= 2;
-    }
+  // find minimum power of 2 such that num_data < 2^{n}
+  int size = 1;
+  while (size < num_data) {
+    size *= 2;
+  }
+  return size;
+}
 
-    for (int i = 0; i < 2 * newSize - 1; ++i) {
-        tree[i] = INT_MAX;
-    }
-
-    return newSize;
+void range_minimum_query_init(int tree[], const int size)
+{
+  for (int i = 0; i < 2 * size - 1; ++i) {
+    tree[i] = 1e8;
+  }
 }
 
 void range_minimum_query_update(
@@ -47,62 +50,65 @@ void range_minimum_query_update(
 }
 
 /**
- * @brief for recursive
+ * @brief find the minimum value between [left, right)
  *
  * @param tree[]
  * @param size
  * @param left
  * @param right
- * @param nodeIndex
- * @param nodeStartIndex
- * @param nodeEndIndex
+ * @param rangeIndex
+ * @param rangeLeftIndex represent interval of rangeIndex.
+ * @param rangeRightIndex
+ *
+ * tree[rangeIndex] is the minimum value of [rangeLeftIndex, rangeRightIndex).
+ * rangeIndex show the value for the range [rangeLeftIndex, rangeRightIndex).
+ * The triple (rangeIndex, rangeLeftIndex, rangeRightIndex)
+ * denotes one Range object for tree[].
  *
  * @return 
  */
 int range_minimum_query_do_query(
     int tree[],
-    const int size,
     const int left,
     const int right,
-    const int nodeIndex,
-    const int nodeStartIndex,
-    const int nodeEndIndex)
+    const int rangeIndex,
+    const int rangeLeftIndex,
+    const int rangeRightIndex)
 {
   // not crossed
-  if (nodeStartIndex <= left || right <= nodeEndIndex) {
+  if (rangeRightIndex <= left || right <= rangeLeftIndex) {
     return INT_MAX;
   }
 
-  // [left, right) contains [nodeStartIndex, nodeEndIndex)
-  if (left <= nodeStartIndex && nodeEndIndex <= right) {
-    return tree[nodeIndex];
+  // [left, right) contains [rangeLeftIndex, rangeRightIndex)
+  if (left <= rangeLeftIndex && rangeRightIndex <= right) {
+    return tree[rangeIndex];
   } else {
     const int value1 = range_minimum_query_do_query(
         tree,
-        size,
         left,
         right,
-        2 * nodeIndex + 1,
-        right,
+        nodeIndexToLeftIndex(rangeIndex),
+        left,
         (left + right) / 2);
     const int value2 = range_minimum_query_do_query(
         tree,
-        size,
         left,
         right,
-        2 * nodeIndex + 2,
+        nodeIndexToRightIndex(rangeIndex),
         (left + right) / 2,
-        left);
+        right);
     return std::min(value1, value2);
   }
 }
 
+// find the minimum value in all values
 int range_minimum_query_query(
     int tree[],
-    const int size,
-    const int left,
-    const int right)
+    const int size)
 {
-    return range_minimum_query_do_query(tree, size, left, right, 0, 0, size);
+  const int left = 0;
+  const int right = size - 1;
+  return range_minimum_query_do_query(tree, left, right, 0, 0, size);
 }
 } // namespace pccb
