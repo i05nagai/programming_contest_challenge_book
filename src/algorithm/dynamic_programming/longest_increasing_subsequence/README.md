@@ -1,9 +1,8 @@
+## Problem
 * $n$,
     * the length of the sequence
 * $a_{0}, \ldots, a_{n-1}$,
     * integer sequence
-
-
 
 Restriction
 
@@ -11,4 +10,4 @@ Restriction
 * $0 \le a_{i} \le 1000000$,
 
 ## Reference
-pp62
+* pp62

@@ -17,7 +17,6 @@ LIST (APPEND chap2_SOURCES
     src/pccb/chap2/knapsack_with_duplication.cc
     src/pccb/chap2/lake_counting.cc
     src/pccb/chap2/longest_common_subsequence.cc
-    src/pccb/chap2/longest_increasing_subsequence/longest_increasing_subsequence.cc
     src/pccb/chap2/minimum_scalar_product.cc
     src/pccb/chap2/minimum_spanning_tree/conscription.cc
     src/pccb/chap2/minimum_spanning_tree/minimum_spanning_tree.cc
@@ -50,7 +49,6 @@ LIST (APPEND chap2_HEADERS
     src/pccb/chap2/knapsack_with_duplication.h
     src/pccb/chap2/lake_counting.h
     src/pccb/chap2/longest_common_subsequence.h
-    src/pccb/chap2/longest_increasing_subsequence/longest_increasing_subsequence.h
     src/pccb/chap2/minimum_scalar_product.h
     src/pccb/chap2/minimum_spanning_tree/conscription.h
     src/pccb/chap2/minimum_spanning_tree/minimum_spanning_tree.h

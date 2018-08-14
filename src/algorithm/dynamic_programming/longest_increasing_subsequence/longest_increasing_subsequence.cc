@@ -1,7 +1,9 @@
-#include "pccb/chap2/longest_increasing_subsequence/longest_increasing_subsequence.h"
+#include "algorithm/dynamic_programming/longest_increasing_subsequence/longest_increasing_subsequence.h"
 #include <algorithm>
 #include <iostream>
 
+namespace algorithm {
+namespace dynamic_programming {
 int longest_increasing_subsequence(
     int length,
     int sequence[])
@@ -31,3 +33,23 @@ int longest_increasing_subsequence(
 
   return maximum_length;
 }
+
+int longest_increasing_subsequence_fast(
+    int length,
+    int sequence[])
+{
+  const int INF = 1e9;
+  // memo_length[i]:
+  // the maximum length of which the sequence ends with sequence[i]
+  int dp[length];
+  // initialize
+  std::fill(dp, dp + length, INF);
+
+  for (size_t i = 1; i < length; ++i) {
+    *std::lower_bound(dp, dp + length, sequence[i]) = sequence[i];
+  }
+
+  return std::lower_bound(dp, dp + length, INF) - dp;
+}
+} // namespace dynamic_programming
+} // namespace algorithm
