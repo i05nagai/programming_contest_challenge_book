@@ -1,5 +1,6 @@
 #include "algorithm/dynamic_programming/traveling_salesman_problem.h"
 #include <iostream>
+#include <bitset>
 
 namespace algorithm {
 namespace dynamic_programming {
@@ -48,6 +49,20 @@ namespace dynamic_programming {
     return min_cost;
   }
 
+  int solve_traveling_salesman_problem_loop(
+      std::vector<int> d[], const int num_vertex)
+  {
+    std::vector<int> dp[1 << num_vertex];
+    for (int i = 0; i < 1 << num_vertex; ++i) {
+      dp[i].resize(num_vertex);
+      for (int j = 0; j < num_vertex; ++j) {
+        dp[i][j] = TRAVELING_SALESMAN_PROBLEM_INF;
+      }
+    }
+    return dp[0][0];
+  }
+
+  // solve a 
   int solve_traveling_salesman_problem(
       std::vector<int> d[], const int num_vertex)
   {
