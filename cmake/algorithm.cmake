@@ -1,6 +1,7 @@
 LIST (APPEND algorithm_SOURCES
     src/algorithm/bucket_method/range_minimum_query.cc
     src/algorithm/dynamic_programming/longest_increasing_subsequence/longest_increasing_subsequence.cc
+    src/algorithm/dynamic_programming/traveling_by_stagecoach.cc
     src/algorithm/dynamic_programming/traveling_salesman_problem.cc
     src/algorithm/knapsack/knapsack.cc
     src/algorithm/segment_tree/a_simple_problem_with_integers.cc
@@ -12,6 +13,7 @@ LIST (APPEND algorithm_SOURCES
 LIST (APPEND algorithm_HEADERS
     src/algorithm/bucket_method/range_minimum_query.h
     src/algorithm/dynamic_programming/longest_increasing_subsequence/longest_increasing_subsequence.h
+    src/algorithm/dynamic_programming/traveling_by_stagecoach.h
     src/algorithm/dynamic_programming/traveling_salesman_problem.h
     src/algorithm/knapsack/knapsack.h
     src/algorithm/segment_tree/a_simple_problem_with_integers.h
