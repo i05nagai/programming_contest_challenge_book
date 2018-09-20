@@ -12,3 +12,8 @@ Count the number of region separated by the lines.
 ### Reference
 * pp 150
 
+### Maximum Mbps
+See [this](../../algorithm/graph).
+
+### Reference
+* p 188

@@ -17,7 +17,6 @@ LIST (APPEND chap2_test_SOURCES
     src/pccb/chap2/knapsack_with_duplication_test.cc
     src/pccb/chap2/lake_counting_test.cc
     src/pccb/chap2/longest_common_subsequence_test.cc
-    src/pccb/chap2/longest_increasing_subsequence/longest_increasing_subsequence_test.cc
     src/pccb/chap2/main.cc
     src/pccb/chap2/minimum_scalar_product_test.cc
     src/pccb/chap2/minimum_spanning_tree/conscription_test.cc
