@@ -9,3 +9,6 @@
 
 ### Reference
 * [2104 \-\- K\-th Number](http://poj.org/problem?id=2104)
+
+### Range Minimum Query
+

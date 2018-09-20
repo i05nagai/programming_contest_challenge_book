@@ -1,4 +1,5 @@
 LIST (APPEND algorithm_SOURCES
+    src/algorithm/bucket_method/k_th_number.cc
     src/algorithm/bucket_method/range_minimum_query.cc
     src/algorithm/dynamic_programming/longest_increasing_subsequence/longest_increasing_subsequence.cc
     src/algorithm/dynamic_programming/traveling_by_stagecoach.cc
@@ -13,6 +14,7 @@ LIST (APPEND algorithm_SOURCES
     src/algorithm/segment_tree/solve_count_bubble_sort.cc
 )
 LIST (APPEND algorithm_HEADERS
+    src/algorithm/bucket_method/k_th_number.h
     src/algorithm/bucket_method/range_minimum_query.h
     src/algorithm/dynamic_programming/longest_increasing_subsequence/longest_increasing_subsequence.h
     src/algorithm/dynamic_programming/traveling_by_stagecoach.h
