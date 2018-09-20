@@ -41,8 +41,8 @@ void RangeMinimumQueryInit(int data[], int size, int bucket[]) {
 void RangeMinimumQueryUpdate(
     int data[], int bucket, const int size, const int index, int value) {
   data[index] = value;
-  const int b_index = GetBucketIndex(index);
-  bucket[b_index] = std::min(bucket[b_index], value);
+  const int b_index = GetBucketIndex(index, size);
+  data[b_index] = std::min(data[b_index], value);
 }
 
 // find the minimum value in all values
