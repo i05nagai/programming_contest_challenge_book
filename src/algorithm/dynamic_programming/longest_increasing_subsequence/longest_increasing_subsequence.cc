@@ -43,10 +43,40 @@ int longest_increasing_subsequence_fast(
   // the maximum length of which the sequence ends with sequence[i]
   int dp[length];
   // initialize
+  for (size_t i = 0; i < length; ++i) {
+    dp[i] = INF;
+  }
+
+  for (size_t i = 0; i < length; ++i) {
+    *std::lower_bound(dp, dp + length, sequence[i]) = sequence[i];
+  }
+
+  return std::lower_bound(dp, dp + length, INF) - dp;
+}
+
+int longest_nondeacreasing_subsequence_fast(
+    int length,
+    int sequence[])
+{
+  // FIXME
+  const int INF = 1e9;
+  // memo_length[i]:
+  // the maximum length of which the sequence ends with sequence[i]
+  int dp[length];
+  // initialize
   std::fill(dp, dp + length, INF);
 
-  for (size_t i = 1; i < length; ++i) {
-    *std::lower_bound(dp, dp + length, sequence[i]) = sequence[i];
+  for (size_t i = 0; i < length; ++i) {
+    int l = 0;
+    int u = length;
+    while (u - l > 1) {
+      const int mid = (u + l) / 2;
+      if (dp[mid] < sequence[i]) {
+        l = mid;
+      } else {
+        u = mid;
+      }
+    }
   }
 
   return std::lower_bound(dp, dp + length, INF) - dp;
