@@ -5,6 +5,7 @@ LIST (APPEND algorithm_SOURCES
     src/algorithm/dynamic_programming/traveling_by_stagecoach.cc
     src/algorithm/dynamic_programming/traveling_salesman_problem.cc
     src/algorithm/graph/ford_fulkerson.cc
+    src/algorithm/graph/graph.cc
     src/algorithm/graph/minimum_spanning_tree/kruskal.cc
     src/algorithm/knapsack/knapsack.cc
     src/algorithm/segment_tree/a_simple_problem_with_integers.cc
@@ -20,6 +21,7 @@ LIST (APPEND algorithm_HEADERS
     src/algorithm/dynamic_programming/traveling_by_stagecoach.h
     src/algorithm/dynamic_programming/traveling_salesman_problem.h
     src/algorithm/graph/ford_fulkerson.h
+    src/algorithm/graph/graph.h
     src/algorithm/graph/minimum_spanning_tree/kruskal.h
     src/algorithm/knapsack/knapsack.h
     src/algorithm/segment_tree/a_simple_problem_with_integers.h
