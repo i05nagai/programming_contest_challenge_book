@@ -1,4 +1,5 @@
 #include "algorithm/dynamic_programming/longest_increasing_subsequence/longest_increasing_subsequence.h"
+#include <random>
 #include <gtest/gtest.h>
 
 namespace algorithm {
