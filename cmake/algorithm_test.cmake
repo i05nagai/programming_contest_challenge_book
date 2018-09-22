@@ -4,6 +4,7 @@ LIST (APPEND algorithm_test_SOURCES
     src/algorithm/dynamic_programming/longest_increasing_subsequence/longest_increasing_subsequence_test.cc
     src/algorithm/dynamic_programming/traveling_by_stagecoach_test.cc
     src/algorithm/dynamic_programming/traveling_salesman_problem_test.cc
+    src/algorithm/graph/bellman_ford/bellman_ford_test.cc
     src/algorithm/graph/ford_fulkerson_test.cc
     src/algorithm/graph/graph_test.cc
     src/algorithm/graph/minimum_spanning_tree/kruskal_test.cc

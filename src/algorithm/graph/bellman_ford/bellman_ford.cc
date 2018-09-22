@@ -1,7 +1,8 @@
-#include "pccb/chap2/bellman_ford.h"
+#include "algorithm/graph/bellman_ford/bellman_ford.h"
 #include <algorithm>
 #include <cstring>
 
+namespace algorithm { namespace graph {
 void shortest_path(
     Edge edges[],
     int dist[],
@@ -54,3 +55,4 @@ bool find_negative_loop(
 
   return false;
 }
+} } // namespace algorithm { namespace graph {

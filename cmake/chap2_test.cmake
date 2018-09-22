@@ -1,5 +1,4 @@
 LIST (APPEND chap2_test_SOURCES
-    src/pccb/chap2/bellman_ford_test.cc
     src/pccb/chap2/binary_search_tree_test.cc
     src/pccb/chap2/bipartite_graph_test.cc
     src/pccb/chap2/breadth_first_search_test.cc

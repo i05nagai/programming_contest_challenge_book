@@ -1,5 +1,4 @@
 LIST (APPEND chap2_SOURCES
-    src/pccb/chap2/bellman_ford.cc
     src/pccb/chap2/binary_search_tree.cc
     src/pccb/chap2/bipartite_graph.cc
     src/pccb/chap2/breadth_first_search.cc
@@ -30,7 +29,6 @@ LIST (APPEND chap2_SOURCES
     src/pccb/chap2/warshall_floyd.cc
 )
 LIST (APPEND chap2_HEADERS
-    src/pccb/chap2/bellman_ford.h
     src/pccb/chap2/binary_search_tree.h
     src/pccb/chap2/bipartite_graph.h
     src/pccb/chap2/breadth_first_search.h

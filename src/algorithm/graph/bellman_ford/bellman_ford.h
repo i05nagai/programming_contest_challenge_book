@@ -1,5 +1,6 @@
 #pragma once
 
+namespace algorithm { namespace graph {
 struct Edge {
     int from;
     int to;
@@ -35,3 +36,4 @@ bool find_negative_loop(
     int dist[],
     const int numVertex,
     const int numEdge);
+} } // namespace algorithm { namespace graph {

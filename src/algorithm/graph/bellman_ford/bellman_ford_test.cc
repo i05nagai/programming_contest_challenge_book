@@ -1,6 +1,7 @@
-#include "pccb/chap2/bellman_ford.h"
+#include "algorithm/graph/bellman_ford/bellman_ford.h"
 #include <gtest/gtest.h>
 
+namespace algorithm { namespace graph {
 TEST(bellman_ford, simple)
 {
     constexpr int numVertex = 7;
@@ -153,3 +154,4 @@ TEST(bellman_ford, negative_loop)
         edges, dist, numVertex, numEdge);
     EXPECT_EQ(true, actual);
 }
+} } // namespace algorithm { namespace graph {
