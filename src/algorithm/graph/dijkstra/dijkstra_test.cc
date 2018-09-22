@@ -1,7 +1,8 @@
-#include "pccb/chap2/dijkstra.h"
+#include "algorithm/graph/dijkstra/dijkstra.h"
 #include <gtest/gtest.h>
 #include <vector>
 
+namespace algorithm { namespace graph {
 TEST(dijkstra, simple)
 {
     constexpr int numVertex = 7;
@@ -247,3 +248,4 @@ TEST(dijkstra, dijkstra_fast_with_path)
     EXPECT_EQ(path[4], 4);
     EXPECT_EQ(path[5], 6);
 }
+} } // namespace algorithm { namespace graph {

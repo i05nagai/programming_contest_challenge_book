@@ -4,7 +4,6 @@ LIST (APPEND chap2_test_SOURCES
     src/pccb/chap2/gcj/bribe_the_prisoners_test.cc
     src/pccb/chap2/crazy_rows_test.cc
     src/pccb/chap2/depth_first_search_test.cc
-    src/pccb/chap2/dijkstra_test.cc
     src/pccb/chap2/factorial_test.cc
     src/pccb/chap2/fence_repair_test.cc
     src/pccb/chap2/greedy_best_cow_line_test.cc

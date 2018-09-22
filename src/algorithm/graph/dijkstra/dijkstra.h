@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 
+namespace algorithm { namespace graph {
 constexpr int DIJKSTRA_INF = 10000000;
 
 struct DijkstraEdge {
@@ -99,3 +100,4 @@ std::vector<int> get_shortest_path_fast(
     const int numVertex,
     const int start,
     const int end);
+} } // namespace algorithm { namespace graph {

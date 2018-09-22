@@ -1,8 +1,9 @@
-#include "pccb/chap2/dijkstra.h"
+#include "algorithm/graph/dijkstra/dijkstra.h"
 #include <algorithm>
 #include <queue>
 #include <vector>
 
+namespace algorithm { namespace graph {
 void dijkstra(
     int dist[],
     const std::vector<std::vector<int>>& cost,
@@ -191,3 +192,4 @@ std::vector<int> get_shortest_path_fast(
     std::reverse(path.begin(), path.end());
     return path;
 }
+} } // namespace algorithm { namespace graph {

@@ -4,7 +4,6 @@ LIST (APPEND chap2_SOURCES
     src/pccb/chap2/gcj/bribe_the_prisoners.cc
     src/pccb/chap2/crazy_rows.cc
     src/pccb/chap2/depth_first_search.cc
-    src/pccb/chap2/dijkstra.cc
     src/pccb/chap2/factorial.cc
     src/pccb/chap2/fence_repair.cc
     src/pccb/chap2/greedy_best_cow_line.cc
@@ -32,7 +31,6 @@ LIST (APPEND chap2_HEADERS
     src/pccb/chap2/gcj/bribe_the_prisoners.h
     src/pccb/chap2/crazy_rows.h
     src/pccb/chap2/depth_first_search.h
-    src/pccb/chap2/dijkstra.h
     src/pccb/chap2/factorial.h
     src/pccb/chap2/fence_repair.h
     src/pccb/chap2/greedy_best_cow_line.h
