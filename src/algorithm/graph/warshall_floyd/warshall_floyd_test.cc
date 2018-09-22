@@ -1,6 +1,7 @@
 #include "warshall_floyd.h"
 #include <gtest/gtest.h>
 
+namespace algorithm { namespace graph {
 TEST(warshall_floyd, simple)
 {
     const int numVertex = 7;
@@ -47,3 +48,4 @@ TEST(warshall_floyd, simple)
     EXPECT_EQ(dist[0][6], 16);
 }
 
+} } // namespace algorithm { namespace graph {

@@ -25,7 +25,6 @@ LIST (APPEND chap2_SOURCES
     src/pccb/chap2/prime_number.cc
     src/pccb/chap2/saruman_army.cc
     src/pccb/chap2/union_find_tree.cc
-    src/pccb/chap2/warshall_floyd.cc
 )
 LIST (APPEND chap2_HEADERS
     src/pccb/chap2/binary_search_tree.h
@@ -55,5 +54,4 @@ LIST (APPEND chap2_HEADERS
     src/pccb/chap2/prime_number.h
     src/pccb/chap2/saruman_army.h
     src/pccb/chap2/union_find_tree.h
-    src/pccb/chap2/warshall_floyd.h
 )

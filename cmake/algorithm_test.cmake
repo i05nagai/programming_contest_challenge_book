@@ -9,6 +9,7 @@ LIST (APPEND algorithm_test_SOURCES
     src/algorithm/graph/ford_fulkerson_test.cc
     src/algorithm/graph/graph_test.cc
     src/algorithm/graph/minimum_spanning_tree/kruskal_test.cc
+    src/algorithm/graph/warshall_floyd/warshall_floyd_test.cc
     src/algorithm/knapsack/knapsack_test.cc
     src/algorithm/main.cc
     src/algorithm/segment_tree/a_simple_problem_with_integers_test.cc

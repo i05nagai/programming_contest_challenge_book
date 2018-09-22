@@ -26,5 +26,4 @@ LIST (APPEND chap2_test_SOURCES
     src/pccb/chap2/prime_number_test.cc
     src/pccb/chap2/saruman_army_test.cc
     src/pccb/chap2/union_find_tree_test.cc
-    src/pccb/chap2/warshall_floyd_test.cc
 )

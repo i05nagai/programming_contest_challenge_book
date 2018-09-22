@@ -17,4 +17,3 @@ $$
 
 
 ## Reference
-* p 98

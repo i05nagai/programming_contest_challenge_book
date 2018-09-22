@@ -1,5 +1,6 @@
 #include "warshall_floyd.h"
 
+namespace algorithm { namespace graph {
 void warshall_floyd(
     std::vector<std::vector<int>>& dist, const int numVertex)
 {
@@ -12,3 +13,4 @@ void warshall_floyd(
         }
     }
 }
+} } // namespace algorithm { namespace graph {
