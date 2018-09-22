@@ -17,13 +17,13 @@ TEST(ford_fulkerson_test, simple1)
     {},
   };
 
-  AddEdge(edges, 0, 1, 10);
-  AddEdge(edges, 0, 2, 2);
-  AddEdge(edges, 1, 2, 6);
-  AddEdge(edges, 1, 3, 6);
-  AddEdge(edges, 2, 4, 5);
-  AddEdge(edges, 3, 2, 3);
-  AddEdge(edges, 3, 4, 8);
+  FordFulkersonAddEdge(edges, 0, 1, 10);
+  FordFulkersonAddEdge(edges, 0, 2, 2);
+  FordFulkersonAddEdge(edges, 1, 2, 6);
+  FordFulkersonAddEdge(edges, 1, 3, 6);
+  FordFulkersonAddEdge(edges, 2, 4, 5);
+  FordFulkersonAddEdge(edges, 3, 2, 3);
+  FordFulkersonAddEdge(edges, 3, 4, 8);
 
   const int actual = FordFulkerson(edges, 0, 4, num_edge, num_vertex);
   EXPECT_EQ(11, actual);

@@ -6,6 +6,15 @@
 namespace algorithm {
 namespace graph {
 
+  void FordFulkersonAddEdge(
+      std::vector<DirectedEdge> edges[],
+      const int from,
+      const int to,
+      const int cost) {
+    edges[from].push_back(DirectedEdge(edges[to].size(), to, cost));
+    edges[to].push_back(DirectedEdge(edges[from].size() - 1, from, 0));
+  }
+
   int DepthFirstSearch(
       std::vector<DirectedEdge> edges[],
       bool used[],
@@ -31,15 +40,6 @@ namespace graph {
       }
     }
     return 0;
-  }
-
-  void AddEdge(
-      std::vector<DirectedEdge> edges[],
-      const int from,
-      const int to,
-      const int cost) {
-    edges[from].push_back(DirectedEdge(edges[to].size(), to, cost));
-    edges[to].push_back(DirectedEdge(edges[from].size() - 1, from, 0));
   }
 
   int FordFulkerson(
