@@ -1,6 +1,7 @@
-#include "pccb/chap2/bipartite_graph.h"
+#include "algorithm/graph/bipartite_graph/bipartite_graph.h"
 #include <vector>
 
+namespace algorithm { namespace graph {
 bool is_bipartitable(
     const std::vector<int> graph[],
     int vertexColor[],
@@ -45,3 +46,4 @@ bool is_bipartite_graph(
     }
     return true;
 }
+} } // namespace algorithm { namespace graph {

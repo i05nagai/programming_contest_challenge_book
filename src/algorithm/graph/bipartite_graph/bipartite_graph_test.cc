@@ -1,6 +1,7 @@
-#include "pccb/chap2/bipartite_graph.h"
+#include "algorithm/graph/bipartite_graph/bipartite_graph.h"
 #include <gtest/gtest.h>
 
+namespace algorithm { namespace graph {
 TEST(bipartite_graph, simple)
 {
     constexpr int numVertex = 4;
@@ -17,3 +18,4 @@ TEST(bipartite_graph, simple)
     const bool actual = is_bipartite_graph(graph, numVertex);
     EXPECT_EQ(true, actual);
 }
+} } // namespace algorithm { namespace graph {

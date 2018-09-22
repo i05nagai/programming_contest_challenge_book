@@ -1,6 +1,5 @@
 LIST (APPEND chap2_SOURCES
     src/pccb/chap2/binary_search_tree.cc
-    src/pccb/chap2/bipartite_graph.cc
     src/pccb/chap2/breadth_first_search.cc
     src/pccb/chap2/gcj/bribe_the_prisoners.cc
     src/pccb/chap2/crazy_rows.cc
@@ -30,7 +29,6 @@ LIST (APPEND chap2_SOURCES
 )
 LIST (APPEND chap2_HEADERS
     src/pccb/chap2/binary_search_tree.h
-    src/pccb/chap2/bipartite_graph.h
     src/pccb/chap2/breadth_first_search.h
     src/pccb/chap2/gcj/bribe_the_prisoners.h
     src/pccb/chap2/crazy_rows.h

@@ -1,6 +1,5 @@
 LIST (APPEND chap2_test_SOURCES
     src/pccb/chap2/binary_search_tree_test.cc
-    src/pccb/chap2/bipartite_graph_test.cc
     src/pccb/chap2/breadth_first_search_test.cc
     src/pccb/chap2/gcj/bribe_the_prisoners_test.cc
     src/pccb/chap2/crazy_rows_test.cc
