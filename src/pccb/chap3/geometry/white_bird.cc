@@ -11,7 +11,8 @@ namespace pccb {
     return vector_y * time - G * time * time * 0.5;
   }
 
-  bool ExistObstacle(const Box& box, const Point& pig, const double yt) {
+  bool ExistObstacleAbovePig(
+      const Box& box, const Point& pig, const double yt) {
     return box.Right() == pig.first
       && pig.second <= box.Upper()
       && box.Lower() <= yt;
@@ -28,23 +29,28 @@ namespace pccb {
     }
   }
 
+  double CalculateTime(const double vector_x, const double x) {
+    return vector_x / x;
+  }
+
   bool HitObstacle(
       const Box& box,
       const Point& pig,
       const double yt,
       const double vx,
       const double vy) {
-    const double pyL = CalculatePositionY(vy, box.LeftLowerX() / vx);
-    const double pyR = CalculatePositionY(vy, box.RightUpperX() / vx);
-    const double ss = CalculatePositionY(vy, box.RightUpperX() / vx);
+    // the time when
+    const double pyL = CalculatePositionY(vy, CalculateTime(vx, box.Left()));
     const int yL = CalculateRelativePosition(
         box.LeftLowerY(), box.RightUpperY(), pyL);
+    const double pyR = CalculatePositionY(vy, CalculateTime(vx, box.Right()));
     const int yR = CalculateRelativePosition(
         box.LeftLowerY(), box.RightUpperY(), pyR);
     const int xH = CalculateRelativePosition(
         box.LeftLowerX(), box.RightUpperX(), vx * (vy / G));
+    const double time = CalculatePositionY(vy, vy / G);
     const int yH = CalculateRelativePosition(
-        box.LeftLowerY(), box.RightUpperY(), ss);
+        box.LeftLowerY(), box.RightUpperY(), time);
     if (xH == 0 && yH >= 0 && yL < 0) {
       return true;
     }
@@ -105,7 +111,7 @@ namespace pccb {
         if (box.Left() >= pig.first) {
           continue;
         }
-        if (ExistObstacle(box, pig, yt)) {
+        if (ExistObstacleAbovePig(box, pig, yt)) {
           ok = false;
         }
         if (HitObstacle(box, pig, yt, vx, vy)) {
