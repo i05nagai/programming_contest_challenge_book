@@ -24,3 +24,5 @@
 * A cone is a unfilled circle
 * No cone touches another cone
 
+## Beauty contest POJ 2187
+

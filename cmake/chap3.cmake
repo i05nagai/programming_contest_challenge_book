@@ -3,6 +3,7 @@ LIST (APPEND chap3_SOURCES
     src/pccb/chap3/binary_search/cable_master.cc
     src/pccb/chap3/binary_search/lower_bound.cc
     src/pccb/chap3/coordinate_compress.cc
+    src/pccb/chap3/geometry/beauty_contest.cc
     src/pccb/chap3/geometry/coneology.cc
     src/pccb/chap3/geometry/jack_straws.cc
     src/pccb/chap3/geometry/white_bird.cc
@@ -18,6 +19,7 @@ LIST (APPEND chap3_HEADERS
     src/pccb/chap3/binary_search/cable_master.h
     src/pccb/chap3/binary_search/lower_bound.h
     src/pccb/chap3/coordinate_compress.h
+    src/pccb/chap3/geometry/beauty_contest.h
     src/pccb/chap3/geometry/common.h
     src/pccb/chap3/geometry/coneology.h
     src/pccb/chap3/geometry/jack_straws.h
