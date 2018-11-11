@@ -18,6 +18,7 @@ LIST (APPEND chap3_HEADERS
     src/pccb/chap3/binary_search/cable_master.h
     src/pccb/chap3/binary_search/lower_bound.h
     src/pccb/chap3/coordinate_compress.h
+    src/pccb/chap3/geometry/common.h
     src/pccb/chap3/geometry/coneology.h
     src/pccb/chap3/geometry/jack_straws.h
     src/pccb/chap3/geometry/white_bird.h
