@@ -33,14 +33,6 @@ namespace algorithm {
       std::sort(buckets[i].begin(), buckets[i].end());
     }
 
-    for (int vi = 0; vi < num_seq; ++vi) {
-      std::cout << seq[vi] << ", ";
-    }
-    std::cout << std::endl;
-    for (int vi = 0; vi < num_seq; ++vi) {
-      std::cout << sorted[vi] << ", ";
-    }
-    std::cout << std::endl;
     std::vector<int> ans(0);
     for (int q = 0; q < queries.size(); ++q) {
       // find k-th number between a[i],...,a[j]
@@ -59,29 +51,18 @@ namespace algorithm {
         // the number of values less than or euqal to mid_val
         int pos = 0;
 
-        std::cout << "b_size: " << b_size << std::endl;
-        std::cout << "k: " << k << std::endl;
-        std::cout << "sorted[" << mid << "]: " << mid_val << std::endl;
-        std::cout << "seq[" << tleft << ", " << tright << "]: " << std::endl;
-        std::cout << "biseq[" << lb << ", " << ub << "]: " << std::endl;
-        for (int vi = tleft; vi <= tright; ++vi) {
-          std::cout << seq[vi] << ", ";
-        }
-        std::cout << std::endl;
         // left-side extra elems
         while (tleft <= tright && tleft % b_size != 0) {
           if (seq[tleft++] <= mid_val) {
             pos++;
           }
         }
-        std::cout << pos << std::endl;
         // right-side extra elems
         while (tleft < tright && tright % b_size != 0) {
           if (seq[--tright] <= mid_val) {
             pos++;
           }
         }
-        std::cout << pos << std::endl;
 
         // bucket
         while(tleft < tright) {
@@ -90,7 +71,6 @@ namespace algorithm {
             - buckets[b].begin();
           tleft += b_size;
         }
-        std::cout << pos << std::endl;
 
         if (pos >= k) {
           ub = mid;
@@ -99,7 +79,6 @@ namespace algorithm {
         }
 
       }
-      std::cout << std::endl;
       ans.push_back(sorted[ub]);
     }
     return ans;
