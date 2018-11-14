@@ -10,6 +10,7 @@ LIST (APPEND algorithm_SOURCES
     src/algorithm/graph/dijkstra/dijkstra.cc
     src/algorithm/graph/ford_fulkerson.cc
     src/algorithm/graph/graph.cc
+    src/algorithm/graph/minimum_cost_flow/minimum_cost_flow.cc
     src/algorithm/graph/minimum_spanning_tree/kruskal.cc
     src/algorithm/graph/minimum_spanning_tree/prim.cc
     src/algorithm/graph/warshall_floyd/warshall_floyd.cc
@@ -32,6 +33,7 @@ LIST (APPEND algorithm_HEADERS
     src/algorithm/graph/dijkstra/dijkstra.h
     src/algorithm/graph/ford_fulkerson.h
     src/algorithm/graph/graph.h
+    src/algorithm/graph/minimum_cost_flow/minimum_cost_flow.h
     src/algorithm/graph/minimum_spanning_tree/kruskal.h
     src/algorithm/graph/minimum_spanning_tree/prim.h
     src/algorithm/graph/warshall_floyd/warshall_floyd.h
