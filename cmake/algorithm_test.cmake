@@ -6,6 +6,7 @@ LIST (APPEND algorithm_test_SOURCES
     src/algorithm/dynamic_programming/traveling_salesman_problem_test.cc
     src/algorithm/graph/bellman_ford/bellman_ford_test.cc
     src/algorithm/graph/bipartite_graph/bipartite_graph_test.cc
+    src/algorithm/graph/bipartite_matching/bipartite_matching_test.cc
     src/algorithm/graph/dijkstra/dijkstra_test.cc
     src/algorithm/graph/ford_fulkerson_test.cc
     src/algorithm/graph/graph_test.cc
