@@ -15,22 +15,26 @@ namespace graph {
     edges[to].push_back(DirectedEdge(edges[from].size() - 1, from, 0));
   }
 
-  int DepthFirstSearch(
+  // Depth First Search
+  // edge.cost denote the remained capacity
+  int FindUsableCapacity(
       std::vector<DirectedEdge> edges[],
       bool used[],
       const int from,
       const int to,
       const int flow) {
+    // reach destination
     if (from == to) {
       return flow;
     }
     used[from] = true;
     for (int i = 0; i < edges[from].size(); ++i) {
       DirectedEdge& e = edges[from][i];
+      // vertex e.to is not used
       // there is room for new flow
       if (!used[e.to] && e.cost > 0) {
         // move to next vertex
-        const int d = DepthFirstSearch(edges, used, e.to, to, std::min(flow, e.cost));
+        const int d = FindUsableCapacity(edges, used, e.to, to, std::min(flow, e.cost));
         if (d > 0) {
           // reduce capacity
           e.cost -= d;
@@ -46,7 +50,6 @@ namespace graph {
       std::vector<DirectedEdge> edges[],
       const int start,
       const int end,
-      const int num_edge,
       const int num_vertex)
   {
     bool used[num_vertex];
@@ -57,7 +60,7 @@ namespace graph {
         used[i] = false;
       }
 
-      const int f = DepthFirstSearch(edges, used, start, end, INF);
+      const int f = FindUsableCapacity(edges, used, start, end, INF);
       if (f == 0) {
         return flow;
       }

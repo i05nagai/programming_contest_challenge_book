@@ -1,7 +1,7 @@
 
 
 ## Graph expressions
-* adjacent lists
+* Adjacency lists
     * space complexity: O(|V| + |E|)
     * implementation
 
@@ -20,7 +20,7 @@ struct Vertex {
 Vertex G[V];
 ```
 
-* adjacent matrix
+* Adjacency matrix
     * space complexity: O(|V| + |V|)
     * a lot of memory
     * if undirected graph, matrix is symmetric

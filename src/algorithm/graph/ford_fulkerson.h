@@ -9,11 +9,12 @@ namespace graph {
       const int to,
       const int cost);
 
+  // edges[vertex_from][vertex_to]
+  // return the maximum from start to end
   int FordFulkerson(
       std::vector<DirectedEdge> edges[],
       const int start,
       const int end,
-      const int num_edge,
       const int num_vertex);
 } // namespace graph
 } // namespace algorithm
