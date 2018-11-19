@@ -11,3 +11,14 @@
 
 ## Reference
 * [3057 \-\- Evacuation](http://poj.org/problem?id=3057)
+
+## Dining
+
+
+## Reference
+* [3281 \-\- Dining](http://poj.org/problem?id=3281)
+
+## Dual Core CPU
+
+## Reference
+* [3469 \-\- Dual Core CPU](http://poj.org/problem?id=3469)
