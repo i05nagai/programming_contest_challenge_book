@@ -8,6 +8,7 @@ LIST (APPEND chap3_SOURCES
     src/pccb/chap3/geometry/jack_straws.cc
     src/pccb/chap3/geometry/white_bird.cc
     src/pccb/chap3/graph/asteroids.cc
+    src/pccb/chap3/graph/dining.cc
     src/pccb/chap3/graph/dual_core_cpu.cc
     src/pccb/chap3/two_pointer_technique/face_the_right_way.cc
     src/pccb/chap3/two_pointer_technique/fliptile.cc
@@ -27,6 +28,7 @@ LIST (APPEND chap3_HEADERS
     src/pccb/chap3/geometry/jack_straws.h
     src/pccb/chap3/geometry/white_bird.h
     src/pccb/chap3/graph/asteroids.h
+    src/pccb/chap3/graph/dining.h
     src/pccb/chap3/graph/dual_core_cpu.h
     src/pccb/chap3/two_pointer_technique/face_the_right_way.h
     src/pccb/chap3/two_pointer_technique/fliptile.h
