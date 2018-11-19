@@ -2,6 +2,9 @@
 #include "algorithm/graph/ford_fulkerson.h"
 
 namespace algorithm { namespace graph {
+//
+// algorithm using FordFulerson
+//
 int BipartiteMatchingFordFulkerson(
     bool** biparate_graph,
     const int num_group1,
@@ -28,6 +31,9 @@ int BipartiteMatchingFordFulkerson(
   return num_match;
 }
 
+//
+// algorithm not using ford folkerson
+// 
 bool ExistPath(
     const std::vector<int> graph[],
     bool used[],
