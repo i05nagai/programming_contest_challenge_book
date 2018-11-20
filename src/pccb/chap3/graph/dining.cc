@@ -1,10 +1,19 @@
-#include <algorithm>
-#include <iostream>
-#include <vector>
-#include "algorithm/graph/ford_fulkerson.h"
+#include "pccb/chap3/graph/dining.h"
 
-namespace algorithm {
-namespace graph {
+namespace pccb {
+  class DirectedEdge {
+  public:
+    explicit DirectedEdge(const int f, const int t, const int c)
+      : from(f),
+      to(t),
+      cost(c)
+      {
+      }
+  public:
+    int from;
+    int to;
+    int cost;
+  };
 
   void FordFulkersonAddEdge(
       std::vector<DirectedEdge> edges[],
@@ -67,6 +76,37 @@ namespace graph {
       flow += f;
     }
   }
-} // namespace graph
-} // namespace algorithm
+  int SolveDining(
+      const int num_cow,
+      const int num_food,
+      const int num_drink,
+      std::vector<std::vector<int>>& food,
+      std::vector<std::vector<int>>& drink)
+  {
+    const int num_vertex = num_food + num_cow + num_drink + 2;
+    const int start = num_vertex - 2;
+    const int end = num_vertex - 1;
+    std::vector<DirectedEdge> graph[num_vertex];
+    for (int i = 0; i < num_food; ++i) {
+      FordFulkersonAddEdge(graph, start, i, 1);
+    }
+    for (int i = 0; i < num_drink; ++i) {
+      const int v_drink = num_food + num_cow + i;
+      FordFulkersonAddEdge(graph, v_drink, end, 1);
+    }
+    for (int ci = 0; ci < num_cow; ++ci) {
+      const int v_cow = ci + num_food;
+      for (int fi = 0; fi < food[ci].size(); ++fi) {
+        const int v_food = food[ci][fi] - 1;
+        FordFulkersonAddEdge(graph, v_food, v_cow, 1);
+      }
+      for (int di = 0; di < drink[ci].size(); ++di) {
+        const int v_drink = num_food + num_cow + drink[ci][di] - 1;
+        FordFulkersonAddEdge(graph, v_cow, v_drink, 1);
+      }
+    }
+
+    return FordFulkerson(graph, start, end, num_vertex);
+  }
+} // namespace pccb
 

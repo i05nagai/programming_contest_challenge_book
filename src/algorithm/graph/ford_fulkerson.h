@@ -1,32 +1,20 @@
 #pragma once
+#include "algorithm/graph/graph.h"
 
 namespace algorithm {
 namespace graph {
-  class DirectedEdge {
-  public:
-    explicit DirectedEdge(const int f, const int t, const int c)
-      : from(f),
-      to(t),
-      cost(c)
-      {
-      }
-  public:
-    int from;
-    int to;
-    int cost;
-  };
-
-  void AddEdge(
+  void FordFulkersonAddEdge(
       std::vector<DirectedEdge> edges[],
       const int from,
       const int to,
       const int cost);
 
+  // edges[vertex_from][vertex_to]
+  // return the maximum from start to end
   int FordFulkerson(
       std::vector<DirectedEdge> edges[],
       const int start,
       const int end,
-      const int num_edge,
       const int num_vertex);
 } // namespace graph
 } // namespace algorithm

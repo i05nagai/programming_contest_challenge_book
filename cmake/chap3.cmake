@@ -3,6 +3,13 @@ LIST (APPEND chap3_SOURCES
     src/pccb/chap3/binary_search/cable_master.cc
     src/pccb/chap3/binary_search/lower_bound.cc
     src/pccb/chap3/coordinate_compress.cc
+    src/pccb/chap3/geometry/beauty_contest.cc
+    src/pccb/chap3/geometry/coneology.cc
+    src/pccb/chap3/geometry/jack_straws.cc
+    src/pccb/chap3/geometry/white_bird.cc
+    src/pccb/chap3/graph/asteroids.cc
+    src/pccb/chap3/graph/dining.cc
+    src/pccb/chap3/graph/dual_core_cpu.cc
     src/pccb/chap3/two_pointer_technique/face_the_right_way.cc
     src/pccb/chap3/two_pointer_technique/fliptile.cc
     src/pccb/chap3/two_pointer_technique/four_values_whose_sum_is_0.cc
@@ -15,6 +22,14 @@ LIST (APPEND chap3_HEADERS
     src/pccb/chap3/binary_search/cable_master.h
     src/pccb/chap3/binary_search/lower_bound.h
     src/pccb/chap3/coordinate_compress.h
+    src/pccb/chap3/geometry/beauty_contest.h
+    src/pccb/chap3/geometry/common.h
+    src/pccb/chap3/geometry/coneology.h
+    src/pccb/chap3/geometry/jack_straws.h
+    src/pccb/chap3/geometry/white_bird.h
+    src/pccb/chap3/graph/asteroids.h
+    src/pccb/chap3/graph/dining.h
+    src/pccb/chap3/graph/dual_core_cpu.h
     src/pccb/chap3/two_pointer_technique/face_the_right_way.h
     src/pccb/chap3/two_pointer_technique/fliptile.h
     src/pccb/chap3/two_pointer_technique/four_values_whose_sum_is_0.h
