@@ -15,6 +15,7 @@ LIST (APPEND algorithm_SOURCES
     src/algorithm/graph/minimum_spanning_tree/prim.cc
     src/algorithm/graph/warshall_floyd/warshall_floyd.cc
     src/algorithm/knapsack/knapsack.cc
+    src/algorithm/queue/window_minimum.cc
     src/algorithm/segment_tree/a_simple_problem_with_integers.cc
     src/algorithm/segment_tree/binary_index_tree.cc
     src/algorithm/segment_tree/crane.cc
@@ -38,6 +39,7 @@ LIST (APPEND algorithm_HEADERS
     src/algorithm/graph/minimum_spanning_tree/prim.h
     src/algorithm/graph/warshall_floyd/warshall_floyd.h
     src/algorithm/knapsack/knapsack.h
+    src/algorithm/queue/window_minimum.h
     src/algorithm/segment_tree/a_simple_problem_with_integers.h
     src/algorithm/segment_tree/binary_index_tree.h
     src/algorithm/segment_tree/crane.h

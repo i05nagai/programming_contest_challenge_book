@@ -15,6 +15,7 @@ LIST (APPEND algorithm_test_SOURCES
     src/algorithm/graph/minimum_spanning_tree/prim_test.cc
     src/algorithm/graph/warshall_floyd/warshall_floyd_test.cc
     src/algorithm/knapsack/knapsack_test.cc
+    src/algorithm/queue/window_minimum_test.cc
     src/algorithm/main.cc
     src/algorithm/segment_tree/a_simple_problem_with_integers_test.cc
     src/algorithm/segment_tree/binary_index_tree_test.cc

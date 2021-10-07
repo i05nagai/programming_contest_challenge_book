@@ -2,6 +2,7 @@ LIST (APPEND chap3_test_SOURCES
     src/pccb/chap3/binary_search/aggressive_cows_test.cc
     src/pccb/chap3/binary_search/cable_master_test.cc
     src/pccb/chap3/binary_search/lower_bound_test.cc
+    src/pccb/chap3/binary_search/maximize_average_test.cc
     src/pccb/chap3/coordinate_compress_test.cc
     src/pccb/chap3/geometry/beauty_contest_test.cc
     src/pccb/chap3/geometry/common_test.cc
@@ -11,6 +12,7 @@ LIST (APPEND chap3_test_SOURCES
     src/pccb/chap3/graph/asteroids_test.cc
     src/pccb/chap3/graph/dining_test.cc
     src/pccb/chap3/graph/dual_core_cpu_test.cc
+    src/pccb/chap3/graph/evacuation_test.cc
     src/pccb/chap3/main.cc
     src/pccb/chap3/two_pointer_technique/face_the_right_way_test.cc
     src/pccb/chap3/two_pointer_technique/fliptile_test.cc
