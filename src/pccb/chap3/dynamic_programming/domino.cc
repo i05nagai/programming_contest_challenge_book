@@ -25,15 +25,15 @@ namespace pccb {
         for (int used = 0; used < 1 << m; ++used) {
           // if j is used or color is black, no need to update
           if (used >> j & 1 || color[i][j]) {
-            // num is the same as the case when there is no 
+            // num is the same as the case when there is no block
             next[used] = crt[used & ~(1 << j)];
           } else {
             int res = 0;
-            // j + 1 is in area, j + 1 is not used, color is white
+            // j + 1 is on area, j + 1 is not used, color is white
             if (j + 1 < m && !(used >> (j + 1) & 1) && !color[i][j+1]) {
               res += crt[used | 1 << (j + 1)];
             }
-            // i + 1 is in area, color is white
+            // i + 1 is on area, color is white
             if (i + 1 < n && !color[i + 1][j]) {
               res += crt[used | 1 << j];
             }
