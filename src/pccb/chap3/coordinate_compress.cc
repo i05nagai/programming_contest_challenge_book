@@ -7,8 +7,8 @@
 namespace pccb {
 
 // return length of compressed table
-// start[]: coordinates of drawed lines. row/col but consistent with end[].
-// end[]: coordinates of drawed lines. row/col
+// start[]: coordinates of drawed lines. row/col.
+// end[]: coordinates of drawed lines. row/col.
 int compress(int start[], int end[], const int numLines, const int size) 
 {
     std::vector<int> xs;
@@ -30,15 +30,37 @@ int compress(int start[], int end[], const int numLines, const int size)
     std::sort(xs.begin(), xs.end());
     xs.erase(std::unique(xs.begin(), xs.end()), xs.end());
 
+    // for (int vi = 0; vi < xs.size(); ++vi) {
+    //   std::cout << xs[vi] << ", ";
+    // }
+    // std::cout << std::endl;
+    // for (int vi = 0; vi < numLines; ++vi) {
+    //   std::cout << start[vi] << ", ";
+    // }
+    // std::cout << std::endl;
+    // for (int vi = 0; vi < numLines; ++vi) {
+    //   std::cout << end[vi] << ", ";
+    // }
+    // std::cout << std::endl;
+    // std::cout << std::endl;
+
     for (int i = 0; i < numLines; ++i) {
       start[i] = std::find(xs.begin(), xs.end(), start[i]) - xs.begin();
       end[i] = std::find(xs.begin(), xs.end(), end[i]) - xs.begin();
     }
+    // for (int vi = 0; vi < numLines; ++vi) {
+    //   std::cout << start[vi] << ", ";
+    // }
+    // std::cout << std::endl;
+    // for (int vi = 0; vi < numLines; ++vi) {
+    //   std::cout << end[vi] << ", ";
+    // }
+    // std::cout << std::endl;
+    // std::cout << std::endl;
 
     return xs.size();
 }
 
-// FIXME
 int coordinate_compress(
     const int numCols,
     const int numRows,
