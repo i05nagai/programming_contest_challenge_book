@@ -1,4 +1,4 @@
-#include "pccb/chap4/strongly_connected_component.h"
+#include "pccb/chap4/graph/strongly_connected_component.h"
 #include <algorithm>
 #include <cstring>
 #include <iostream>
@@ -11,7 +11,7 @@ typedef std::vector<vec> mat;
 
 namespace pccb {
 
-void dfs(int vertex, vecor<bool>& used, mat& graph, vec& postOrder) {
+void dfs(int vertex, vector<bool>& used, mat& graph, vec& postOrder) {
   used[vertex] = true;
   for (int i = 0; i < graph[vertex].size(); ++i) {
     if (!used[graph[vertex][i]]) {

@@ -1,6 +1,6 @@
 #pragma once
 
 namespace pccb {
-int strongly_connected_component(mat& graph, int numVertex);
+int slide_min(int numVertex);
 } // namespace pccb
 

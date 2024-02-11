@@ -1,4 +1,4 @@
-#include "pccb/chap4/strongly_connected_component.h"
+#include "pccb/chap4/graph/strongly_connected_component.h"
 #include <gtest/gtest.h>
 
 #include <algorithm>

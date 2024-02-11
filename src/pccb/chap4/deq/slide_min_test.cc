@@ -1,4 +1,4 @@
-#include "pccb/chap4/slide_min.h"
+#include "pccb/chap4/deq/slide_min.h"
 #include <gtest/gtest.h>
 
 #include <algorithm>
@@ -13,27 +13,15 @@ typedef std::vector<vec> mat;
 
 namespace pccb {
 // examples are in p 151
-TEST(strongly_connected_component, simple)
+TEST(slide_min_test, simple)
 {
   {
     int numVertex = 12;
     vector<vector<int>> graph = {
-      {},
-      {2},
-      {1},
-      {2, 0},
-      {6},
-      {4, 3, 2},
-      {5},
-      {9},
-      {7, 6},
-      {8},
-      {7, 9},
-      {10},
     };
 
-    const int numRegions = strongly_connected_component(graph, numVertex);
-    EXPECT_EQ(6, numRegions);
+    const int actual = slide_min(numVertex);
+    EXPECT_EQ(0, actual);
   }
 }
 } // namespace pccb
