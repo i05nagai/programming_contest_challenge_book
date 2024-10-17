@@ -4,6 +4,9 @@ LIST (APPEND chap3_SOURCES
     src/pccb/chap3/binary_search/lower_bound.cc
     src/pccb/chap3/binary_search/maximize_average.cc
     src/pccb/chap3/coordinate_compress.cc
+    src/pccb/chap3/dynamic_programming/color_blocks.cc
+    src/pccb/chap3/dynamic_programming/domino.cc
+    src/pccb/chap3/dynamic_programming/fibonacci.cc
     src/pccb/chap3/geometry/beauty_contest.cc
     src/pccb/chap3/geometry/coneology.cc
     src/pccb/chap3/geometry/jack_straws.cc
@@ -25,6 +28,9 @@ LIST (APPEND chap3_HEADERS
     src/pccb/chap3/binary_search/lower_bound.h
     src/pccb/chap3/binary_search/maximize_average.h
     src/pccb/chap3/coordinate_compress.h
+    src/pccb/chap3/dynamic_programming/color_blocks.h
+    src/pccb/chap3/dynamic_programming/domino.h
+    src/pccb/chap3/dynamic_programming/fibonacci.h
     src/pccb/chap3/geometry/beauty_contest.h
     src/pccb/chap3/geometry/common.h
     src/pccb/chap3/geometry/coneology.h

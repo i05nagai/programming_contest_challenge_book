@@ -4,6 +4,9 @@ LIST (APPEND chap3_test_SOURCES
     src/pccb/chap3/binary_search/lower_bound_test.cc
     src/pccb/chap3/binary_search/maximize_average_test.cc
     src/pccb/chap3/coordinate_compress_test.cc
+    src/pccb/chap3/dynamic_programming/color_blocks_test.cc
+    src/pccb/chap3/dynamic_programming/domino_test.cc
+    src/pccb/chap3/dynamic_programming/fibonacci_test.cc
     src/pccb/chap3/geometry/beauty_contest_test.cc
     src/pccb/chap3/geometry/common_test.cc
     src/pccb/chap3/geometry/coneology_test.cc
